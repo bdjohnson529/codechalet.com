@@ -1,0 +1,28 @@
+{
+  "name": "codechalet",
+  "version": "1.0.0",
+  "description": "This static website is built using Bootstrap and Jekyll.",
+  "main": "index.js",
+  "scripts": {
+    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/_main.scss css/style.css",
+    "css:minify": "cleancss --level 1 --source-map --source-map-inline-sources --output site/css/style.min.css css/style.css",
+    "css": "npm run css:compile && npm run css:minify",
+    "js:bootstrap": "copyfiles -f node_modules/bootstrap/dist/js/bootstrap.min.js assets/js",
+    "js:popper": "copyfiles -f node_modules/popper.js/dist/popper.min.js assets/js",
+    "js:holder": "copyfiles -f node_modules/holderjs/holder.min.js assets/js",
+    "js:copy": "npm run js:bootstrap && npm run js:popper && npm run js:holder",
+    "build": "npm run js:copy && bundle exec jekyll serve -P 5000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "clean-css-cli": "^4.3.0",
+    "holderjs": "^2.9.7",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1"
+  },
+  "dependencies": {
+    "integer": "^4.0.0"
+  }
+}
