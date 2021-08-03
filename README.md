@@ -1,30 +1,34 @@
-# Jekyll deployed on Heroku
+# Jekyll blog
+This is a Jekyll blog, deployed on AWS.
 
-This is a Jekyll blog, deployed on Heroku. Documentation is included to demonstrate deployment.
+## Setup
+1. Install [Ruby](https://www.ruby-lang.org/en/).
+2. Install all dependencies. This command installs the dependencies listed in `Gemfile`.
+```
+bundle install
+npm install
+```
+3. Serve the application locally.
+```
+bundle exec jekyll serve
+```
+View the application at `http://localhost:4000/`. Notice that the website is saved in the `_site` folder.
 
+# Deployment
 
-## Deployment
-Serve locally:
+## Serve Locally
+To serve the website locally, enter the following command in the Anaconda CMD.
+```
+python -m http.server
+```
 
-		bundle exec jekyll serve
+## Deploy to S3
+The website is hosted using AWS S3 and Route 53. To deploy the website to AWS S3, enter the following command in the Windows CMD. Make sure you run the command from the `_site` directory so you only upload the static website, not the associated Jekyll files!
+```
+aws s3 sync . s3://kvaltis.com/ --delete
+```
 
-Publish to Github pages:
-
-		git push homepage master
-
-
-Configure Git repo for Heroku deployment.
-
-		heroku git:remote -a myherokusite
-		heroku buildpacks:add heroku/ruby
-
-Deploy:
-
-		git push heroku master
-		heroku open
-
-
-
-
-## References
-- [Jekyll on Heroku](https://blog.heroku.com/jekyll-on-heroku)
+Refresh Cloudfront (note that Cloudfront supports only 1000 free refreshes per month). Here is [a reference](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-serving-outdated-content-s3/).
+```
+aws cloudfront create-invalidation --distribution-id distribution_ID --paths "/*"
+```
