@@ -25,7 +25,8 @@ python -m http.server
 ## Deploy to S3
 The website is hosted using AWS S3 and Route 53. To deploy the website to AWS S3, enter the following command in the Windows CMD. Make sure you run the command from the `_site` directory so you only upload the static website, not the associated Jekyll files!
 ```
-aws s3 sync . s3://kvaltis.com/ --delete
+cd _site
+aws s3 sync . s3://codechalet.com/ --delete
 ```
 
 Refresh Cloudfront (note that Cloudfront supports only 1000 free refreshes per month). Here is [a reference](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-serving-outdated-content-s3/).
