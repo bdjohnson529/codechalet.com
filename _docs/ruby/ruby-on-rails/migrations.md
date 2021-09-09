@@ -11,14 +11,13 @@ Migrations are a way to alter the database schema over time.
 ## ActiveRecord Generator
 Create a new scaffold
 ```bash
-bin/rails g scaffold Post name:string title:string content:text
+bin/rails g scaffold Post name:string title:string user:references
 ```
 
 Generate migration
 ```bash
 bin/rails g migration AddWeightToPeople
 ```
-
 
 ## Migrations
 Add default value
@@ -34,13 +33,13 @@ end
 
 | Command | Description |
 | -- | -- |
-| db:migrate | runs (single) migrations that have not run yet. |
-| db:create | creates the database |
-| db:drop | deletes the database |
-| db:schema:load | creates tables and columns within the existing database following schema.rb. This will delete existing data. |
-| db:setup | does db:create, db:schema:load, db:seed |
-| db:reset | does db:drop, db:setup |
-| db:migrate:reset | does db:drop, db:create, db:migrate |
+| `db:migrate` | runs (single) migrations that have not run yet. |
+| `db:create` | creates the database |
+| `db:drop` | deletes the database |
+| `db:schema:load` | creates tables and columns within the existing database following schema.rb. This will delete existing data. |
+| `db:setup` | does `db:create`, `db:schema:load`, `db:seed` |
+| `db:reset` | does `db:drop`, `db:setup` |
+| `db:migrate:reset` | does `db:drop`, `db:create`, `db:migrate` |
 
 
 ## Resources
