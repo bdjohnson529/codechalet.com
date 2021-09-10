@@ -31,3 +31,6 @@ parent_path: ruby/
 
 # StimulusJS
 * [Build a Dynamic Search with Stimulus.js and Rails 6](https://medium.com/swlh/build-a-dynamic-search-with-stimulus-js-and-rails-6-56b537a44579)
+
+# Devise
+* [Devise test helpers](https://henrytabima.github.io/rails-setup/docs/devise/test-helpers)
