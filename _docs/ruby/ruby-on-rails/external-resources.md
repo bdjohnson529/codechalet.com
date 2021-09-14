@@ -22,6 +22,7 @@ parent_path: ruby/
 * [What Are Rails Parameters & How to Use Them Correctly](https://www.rubyguides.com/2019/06/rails-params/)
 * [Working with JavaScript in Rails](https://guides.rubyonrails.org/working_with_javascript_in_rails.html)
 * [Roll Your Own Static Pages in a Rails App](https://blog.teamtreehouse.com/static-pages-ruby-rails)
+* [Session User Flow in Rails](https://www.ombulabs.com/blog/ruby/rails/sessions/session-user-flow.html)
 
 # Google Maps API
 * [Google Maps API with StimulusJS](https://www.driftingruby.com/episodes/google-maps-api-with-stimulusjs)
