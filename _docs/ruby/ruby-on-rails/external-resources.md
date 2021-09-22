@@ -24,6 +24,13 @@ parent_path: ruby/
 * [Roll Your Own Static Pages in a Rails App](https://blog.teamtreehouse.com/static-pages-ruby-rails)
 * [Session User Flow in Rails](https://www.ombulabs.com/blog/ruby/rails/sessions/session-user-flow.html)
 
+# Controllers
+* [Organizing Controllers with Modules](https://toasterlovin.com/rails-organizing-controllers-with-modules/)
+
+# Authentication
+* [Devise test helpers](https://henrytabima.github.io/rails-setup/docs/devise/test-helpers)
+* [Authentication with pundit](https://devblast.com/r/modular-rails/the-core-module%3A-authorization-with-pundit)
+
 # Google Maps API
 * [Google Maps API with StimulusJS](https://www.driftingruby.com/episodes/google-maps-api-with-stimulusjs)
 * [Google maps api v3 with rails](https://pjbelo.medium.com/using-google-maps-api-v3-with-rails-5-2-b066a4b2cf14)
@@ -33,6 +40,3 @@ parent_path: ruby/
 # StimulusJS
 * [Build a Dynamic Search with Stimulus.js and Rails 6](https://medium.com/swlh/build-a-dynamic-search-with-stimulus-js-and-rails-6-56b537a44579)
 * [Stimulus 101 - Building a Modal](https://tighten.co/blog/stimulus-101-building-a-modal/)
-
-# Devise
-* [Devise test helpers](https://henrytabima.github.io/rails-setup/docs/devise/test-helpers)
