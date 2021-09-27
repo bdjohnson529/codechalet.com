@@ -45,6 +45,17 @@ class UserTest < ActiveSupport::TestCase
   end
 ```
 
+## HTML Status Codes
+Integration tests can test for user flows. For example, you can write a test to initiate an HTTP request to the server, and minitest can verify the response code. The list of status codes in Ruby [can be found here.](https://rubydoc.info/github/rack/rack/master/Rack/Utils#HTTP_STATUS_CODES-constant)
+```ruby
+class UserLoginTest < ActionDispatch::IntegrationTest
+  test 'Omniauth login flow' do
+      post user_google_oauth2_omniauth_authorize_path
+      assert_response :ok
+    end
+  end
+end
+```
 
 ## References
 * [How To Test Rails Models with Minitest](https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-minitest)
