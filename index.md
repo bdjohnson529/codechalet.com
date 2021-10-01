@@ -3,7 +3,7 @@ layout: blog
 ---
 # Welcome to Code Chalet!
 
-This site contains resources about different software engineering topics. To start, click a topic which interests you. Some personal favorites are the [Python](/docs/python/) tutorials and the [Git](http://localhost:4000/docs/gitcli/index.html) cheat sheets.
+This site contains resources about different software engineering topics. To start, click a topic which interests you. Some personal favorites are the [Python](/docs/python/index.html) tutorials and the [Git](/docs/gitcli/index.html) cheat sheets.
 
 <br>
 
