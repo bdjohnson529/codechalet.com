@@ -1,10 +1,9 @@
 ---
 title: "Docker Commands"
 layout: blog
-topic: docker
 order: 0
-parent: Docker
-parent_path: docker/
+topic: Docker
+topic_path: /docs/docker/index.html
 ---
 
 View all images

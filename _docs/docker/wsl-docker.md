@@ -1,8 +1,8 @@
 ---
 title: "Docker on WSL"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Docker
+topic_path: /docs/docker/index.html
 ---
 
 Docker is a utility which containerizes applications. To set up docker with the WSL, follow these steps:

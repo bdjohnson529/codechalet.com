@@ -2,20 +2,25 @@
 title: "Docker"
 layout: blog
 link: "landing"
-parent: Docs
-parent_path: ''
+topic: Docker
+topic_path: /docs/docker/index.html
 image: docker
 ---
+{% assign pages = site.docs | sort: 'order' %}
+
 Docker generates an image of our app, making it easier to deploy. Tested with Docker installed on WSL2.
 
 <ul>
-{% assign topics = site.docs | where: "topic", "docker" | sort: 'order' %}
-{%- for page in topics -%}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
+{%- for page in pages -%}
+  {% if page.path contains "docker" %}
+    {% unless page.path contains "index.md" %}
+      <li>
+        <a href="{{ page.url | relative_url }}">
+          {{ page.title | escape }}
+        </a>
+      </li>
+    {% endunless %}
+  {% endif %}
 {%- endfor -%}
 </ul>
 
