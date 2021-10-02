@@ -2,17 +2,24 @@
 title: "Javascript"
 layout: blog
 link: "landing"
-parent: Docs
-parent_path: ''
+topic: Javascript
+topic_path: /docs/javascript/index.html
 image: javascript
 ---
+{% assign pages = site.docs | sort: 'order' %}
+
 These are my notes from learning Javascript.
 
 <ul>
-{% assign topics = site.docs | where: "link", "javascript" %}
-{%- for page in topics -%}
-  <li><a href="{{ page.url | relative_url }}">
-    {{ page.title | escape }}
-  </a></li>
+{%- for page in pages -%}
+  {% if page.path contains "javascript" %}
+    {% unless page.path contains "index.md" %}
+      <li>
+        <a href="{{ page.url | relative_url }}">
+          {{ page.title | escape }}
+        </a>
+      </li>
+    {% endunless %}
+  {% endif %}
 {%- endfor -%}
 </ul>
