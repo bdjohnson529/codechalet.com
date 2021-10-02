@@ -2,7 +2,6 @@
 layout: blog
 ---
 # Welcome to Code Chalet!
-
 This site contains resources about different software engineering topics. To start, click a topic which interests you. Some personal favorites are the [Python](/docs/python/index.html) tutorials and the [Git](/docs/gitcli/index.html) cheat sheets.
 
 <br>
@@ -10,7 +9,6 @@ This site contains resources about different software engineering topics. To sta
 <div class="row">
   {% assign topics = site.docs | where: "link", "landing" | sort: "title" %}
   {% for page in topics %}
-  <div class="py-2">
     <div class="col-lg-4">
       <span>
         <a href="{{ page.url | relative_url }}">
@@ -18,6 +16,5 @@ This site contains resources about different software engineering topics. To sta
         </a>
       </span>
     </div>
-  </div>
   {%- endfor -%}
 </div>
