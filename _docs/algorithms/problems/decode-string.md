@@ -1,10 +1,9 @@
 ---
 title: "Decode string"
 layout: blog
-topic: algorithm-problems
 order: 0
-parent: Algorithms
-parent_path: algorithms/
+topic: Algorithms
+topic_path: /docs/algorithms/index.html
 ---
 Given an encoded string, return its decoded string.
 
