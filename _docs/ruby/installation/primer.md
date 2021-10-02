@@ -1,10 +1,9 @@
 ---
 title: "Ruby Primer"
 layout: blog
-topic: ruby-installation
 order: 1
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 
 

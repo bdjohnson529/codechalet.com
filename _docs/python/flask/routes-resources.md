@@ -1,10 +1,9 @@
 ---
 title:  "Routes and Resources"
 layout: blog
-topic: flask
 order: 2
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 Routing is the mechanism by which HTTP requests are routed to the code which handles them. When a user visits the page `/home`, their computer makes an HTTP request to the server. Routing will determine what happens from there.

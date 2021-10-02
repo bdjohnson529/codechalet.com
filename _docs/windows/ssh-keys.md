@@ -1,8 +1,8 @@
 ---
 title: "SSH Keys for Azure Devops"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 
 SSH keys are a verification method which you can use to clone repos from Azure Devops onto the WSL.

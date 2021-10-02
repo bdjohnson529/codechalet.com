@@ -1,10 +1,9 @@
 ---
 title:  "SQLite and config variables"
 layout: blog
-topic: flask
 order: 6
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 To connect a SQLite database to Flask, and SQLAlchemy, we only need set a few configuration variables in the Flask app. I usually define my configuration variables in a separate file, `config.py`. I then import this file into `__init__.py`. I have noticed that I need a secret key defined to use some features of SQLAlchemy. Best practice is to set this to a secure value.

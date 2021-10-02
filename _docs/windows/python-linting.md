@@ -1,8 +1,8 @@
 ---
 title: "Python Linting in Sublime"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 Linters are tools which analyze source code to flag functional and stylistic errors. You've probably seen linting in action - if you've ever used SQL Server Management Studio, the application will highlight parts of your query which are incorrect. Linters are helpful tools to increase the quality of source code. They are especially helpful to enforce stylistic conventions on a software development team.
 

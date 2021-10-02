@@ -2,8 +2,8 @@
 title:  "Javascript variables"
 link: javascript
 layout: blog
-parent: Javascript
-parent_path: javascript/
+topic: Javascript
+topic_path: /docs/javascript/index.html
 ---
 
 Javascript ES6 was released in 2015, and introduced several new concepts to Javascript. ES6 introduced *let* and *const* object declarations, to accompany the existing *var* declaration. There are slight differences between variables declared using *var*, *let*, and *const*.

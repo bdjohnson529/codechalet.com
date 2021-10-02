@@ -1,10 +1,9 @@
 ---
 title: "Conditionals"
 layout: blog
-topic: ruby-syntax
 order: 0
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 Conditional statements evaluate as either `true` or `false`.
 

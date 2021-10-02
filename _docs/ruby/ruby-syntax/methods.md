@@ -1,10 +1,9 @@
 ---
 title: "Methods"
 layout: blog
-topic: ruby-syntax
 order: 3
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 Ruby methods are similar to functions in other programming languages. Method names need to start with a lower case letter so that the Ruby interpreter parses them correctly.
 

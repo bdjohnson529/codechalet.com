@@ -2,9 +2,8 @@
 layout: blog
 title:  "Cross Platform Python"
 order: 1
-topic: python-paradigms
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 Python evolves at a rapid pace. This is one reason it is especially important to specify the version of each module, when deploying an application to production. There are also ways of writing Python which make them compatible across different versions of Python.
 

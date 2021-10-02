@@ -1,10 +1,9 @@
 ---
 title: "Procs"
 layout: blog
-topic: ruby-syntax
 order: 2
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 A proc is another encapsulation of code. Procs are assigned a variable name, and in this way are similar to methods. Blocks, on the other hand, are not assigned a variable name. You could define a Proc at the top of your file and call it later, but you could not do this with a Block.
 

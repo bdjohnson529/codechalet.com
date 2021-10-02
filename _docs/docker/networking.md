@@ -1,10 +1,9 @@
 ---
 title: "Docker Networking"
 layout: blog
-topic: docker
 order: 1
-parent: Docker
-parent_path: docker/
+topic: Docker
+topic_path: /docs/docker/index.html
 ---
 A Docker container has its own networking namespace, isolated from the machine it is running on. Your computer has its own networking namespace, which is a shared set of IP routing tables. To view your networking namespace,
 ```bash

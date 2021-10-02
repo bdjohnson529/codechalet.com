@@ -1,44 +1,14 @@
 ---
 layout: default
 ---
+<div class="container blog mx-auto">
+  <div class="row">
+    <div class="col-8 mx-auto">
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-  <ul class="post-list">
-    {% assign topics = site.pages | where: "link", "landing" | sort: "title" %}
-    {%- for page in topics -%}
-      <li>
-        <span class="post-meta">{{ page.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ page.url | relative_url }}">
-            {{ page.title | escape }}
-          </a>
-        </h3>
-      </li>
-    {%- endfor -%}
-
-  </ul>
-  
-  <img src="{{site.baseurl}}/assets/images/traveling-small.jpg" class="center">
-
-  <h1>Hi! I'm Ben.</h1>
-  <h3>I enjoy traveling, cooking, and building software. I like using technology to deliver impact; whether it's assembling drones, writing an API in Flask, building custom maps in Javascript or calibrating phone cameras using C++.</h3>
-
-  <h3>I enjoy growing engineering teams. High performing teams are like well-designed software; they are greater than the sum of their parts. I believe that differences and diversity make for a strong team.</h3>
-
-  <h3>Welcome to my website!</h3><br><br>
-
-
+      <h1>{{ page.title }}</h1>
+      
+      {{ content }}
+    </div>
+  </div>
 
 </div>
-

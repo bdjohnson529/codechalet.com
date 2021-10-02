@@ -2,9 +2,8 @@
 layout: blog
 title:  "Python Lists"
 order: 1
-topic: python-paradigms
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 Lists are a basic type of data structure. Lists can be collections of integers, floats, or strings. It turns out, lists can be used to store any object. The syntax remains the same when constructing a list of floats, `[1.0, 2.0, 3.0]`, a list of integers, `[1, 2, 3]`, or a list of strings `['a', 'b', 'c']`.

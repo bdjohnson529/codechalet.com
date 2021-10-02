@@ -1,10 +1,9 @@
 ---
 layout: blog
 title: Distributed pipelines in PySpark
-topic: data-engineering
 order: 3
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 ### What is distributed computing?
 There are many cases when we we need to perform a computation, or some sort of processing, on a large dataset. Consider, for example, a dataset with one million rows (a modest size in the context of big data). Let's say we have a computation which takes 1 second to perform. If we run the calculation on a single processor, the calculation will take 277 hours to complete.

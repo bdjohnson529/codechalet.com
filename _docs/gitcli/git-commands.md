@@ -1,8 +1,8 @@
 ---
 title: "Git Commands"
 layout: blog
-parent: Git CLI
-parent_path: gitcli/
+topic: Git CLI
+topic_path: /docs/gitcli/index.html
 ---
 
 Test Git installation

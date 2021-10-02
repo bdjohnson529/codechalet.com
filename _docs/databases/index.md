@@ -2,19 +2,24 @@
 title: "Databases"
 layout: blog
 link: "landing"
-parent: Databases
-parent_path: ''
+topic: Databases
+topic_path: /docs/databases/index.html
 image: database
 ---
+{% assign pages = site.docs | sort: 'order' %}
+
 Notes from configuring and deploying databases on the Windows Subsystem for Linux.
 
 <ul>
-{% assign topics = site.docs | where: "topic", "databases" | sort: 'order' %}
-{%- for page in topics -%}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
+{%- for page in pages -%}
+  {% if page.path contains "databases" %}
+    {% unless page.path contains "index.md" %}
+      <li>
+        <a href="{{ page.url | relative_url }}">
+          {{ page.title | escape }}
+        </a>
+      </li>
+    {% endunless %}
+  {% endif %}
 {%- endfor -%}
 </ul>

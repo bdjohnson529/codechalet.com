@@ -1,8 +1,8 @@
 ---
 title: "Sublime Keyboard Shortcuts"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 Sublime allows the user to configure key bindings. To access the key bindings, `Preferences -> Key Bindings`. Here are some of the custom key bindings I use:
 

@@ -1,8 +1,8 @@
 ---
 title: "Sublime on WSL"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 
 Presumably you will need some sort of text editor to edit your code. You can use VisualStudio, which reportedly has a nice integration with WSL2. I prefer to use Sublime Text, as it is a lighter application. To launch Sublime text from the Linux command line, you'll need to configure the `~/.bashrc` file, which defines aliases for the Linux command line.

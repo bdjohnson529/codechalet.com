@@ -1,10 +1,9 @@
 ---
 title: "House robber"
 layout: blog
-topic: algorithm-problems
 order: 0
-parent: Algorithms
-parent_path: algorithms/
+topic: Algorithms
+topic_path: /docs/algorithms/index.html
 ---
 You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
 

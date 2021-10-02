@@ -1,10 +1,9 @@
 ---
 title: "Dynamic Arrays"
 layout: blog
-topic: algorithm-concepts
 order: 1
-parent: Algorithms
-parent_path: algorithms/
+topic: Algorithms
+topic_path: /docs/algorithms/index.html
 ---
 What is the time complexity of adding an element to a dynamic array? A dynamic array allocates space based on the number of elements in the array. Each time the array reaches capacity, the array contents are copied to a new array with twice as many elements.
 

@@ -1,8 +1,8 @@
 ---
 title: "Windows Subsystem for Linux"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 Our apps will typically be deployed on Linux machines. To streamline deployment, it is recommended that the apps are tested on Ubuntu before attempting to deploy them on an external machine via Azure Pipelines or Azure App Service. Fortunately, Microsoft has released a contanerized version of Linux, called the Windows Subsystem for Linux, which can be installed on Windows machines. The WSL is available for installation through the Microsoft Store, free of cost. Surprisingly enough, the majority of Linux computers in the world are actually deployed by Microsoft, so they have plenty of experience containerizing the Linux OS.
 

@@ -1,10 +1,9 @@
 ---
 title: "Commits"
 layout: blog
-topic: git-workflow
 order: 0
-parent: Git CLI
-parent_path: gitcli/
+topic: Git CLI
+topic_path: /docs/gitcli/index.html
 ---
 
 Initialize a local repo

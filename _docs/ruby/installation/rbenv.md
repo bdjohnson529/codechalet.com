@@ -1,10 +1,9 @@
 ---
 title: "rbenv"
 layout: blog
-topic: ruby-installation
 order: 0
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 [Rbenv](https://github.com/rbenv/rbenv) is a great Linux tool for managing Ruby environments.  A counterpart in Python might be *Anaconda*. Rbenv uses [ruby-build](https://github.com/rbenv/ruby-build) to install Ruby. Using Rbenv, we can install a specific version of Ruby:
 ```bash

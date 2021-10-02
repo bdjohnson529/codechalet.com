@@ -3,8 +3,8 @@ title: "netsh Commands"
 layout: blog
 topic: windows
 order: 0
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 Commands are tested on Powershell with admin priveleges.
 

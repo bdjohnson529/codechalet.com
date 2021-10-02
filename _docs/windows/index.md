@@ -2,10 +2,12 @@
 title: "Windows"
 layout: blog
 link: "landing"
-parent: Docs
-parent_path: ''
+topic: Windows
+topic_path: /docs/windows/index.html
 image: windows
 ---
+{% assign pages = site.docs | sort: 'order' %}
+
 Notes from configuring Windows for software development.
 
 ## Windows
@@ -16,7 +18,6 @@ Notes from configuring Windows for software development.
 ## Windows Subsystem for Linux
 * [Introduction](wsl.html)
 * [SSH Keys](ssh-keys.html)
-* [Docker](wsl-docker.html)
 * [Sublime](wsl-sublime.html)
 
 

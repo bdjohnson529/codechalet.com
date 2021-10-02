@@ -1,10 +1,9 @@
 ---
 title: "Strings"
 layout: blog
-topic: ruby-syntax
 order: 4
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 Strings in Ruby are specified the same way as they are in Python. A string is enclosed by either single or double quotes.
 ```ruby

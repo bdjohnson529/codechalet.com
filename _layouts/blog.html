@@ -1,24 +1,21 @@
 ---
 layout: default
 ---
-<div class="container blog">
-  {%- if page.title -%}
-    <h1>{{ page.title }}</h1>
-  {%- endif -%}
-  
-  {{ content }}
+<div class="container blog mx-auto">
+  <div class="row">
+    <div class="col-8 mx-auto">
 
+      {% include navpane.html 
+         topic=page.topic
+         topic_path=page.topic_path
+         section=page.title
+         section_path=page.path %}
 
-  <br>
-
-  {% if page.link == 'landing' %}
-    <form action="/">
-        <input type="submit" value="Back to the Chalet " />
-    </form>
-  {% elsif page.parent %}
-    <form action="/{{ page.collection }}/{{ page.parent_path }}">
-        <input type="submit" value="Back to {{ page.parent }} " />
-    </form>
-  {% endif %}
-
+      {% if page.title %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+      
+      {{ content }}
+    </div>
+  </div>
 </div>

@@ -3,8 +3,8 @@ title: "Flask"
 layout: blog
 link: "python"
 excerpt: "Design patterns for Flask."
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 Flask is a Python framework for building web applications.
 

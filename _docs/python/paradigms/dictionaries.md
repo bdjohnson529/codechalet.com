@@ -2,9 +2,8 @@
 layout: blog
 title:  "Python Dictionaries"
 order: 2
-topic: python-paradigms
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 Using lists, we can store collections of objects. To access an element, `L[i]`, in a list, we only need know the index of the element `i`. Lists are excellent ways to represent sequences of data. Let's say I store monthly kWh consumption over a period of 12 months in the list object `monthly_kwh`. It is a straight forward to retrieve the consumption in January, June or December using the index, `monthly_kwh[i]`.
