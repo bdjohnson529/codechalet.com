@@ -1,11 +1,7 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-# Order does matter with the includes
 ---
-
-// core bootstrap CSS
-@import "node_modules/bootstrap/scss/bootstrap";
 
 // import custom sass files
 @import "vars";
+@import "links";
 @import "blog";
