@@ -1,8 +1,8 @@
 ---
 title: "Windows Resource Logging"
 layout: blog
-parent: Windows
-parent_path: windows/
+topic: Windows
+topic_path: /docs/windows/index.html
 ---
 Resource logging is helpful if you're trying to optimize the performance of your computer.
 
