@@ -1,10 +1,9 @@
 ---
 title: postgres
 layout: blog
-topic: databases
 order: 2
-parent: Databases
-parent_path: /databases/
+topic: Databases
+topic_path: /docs/databases/index.html
 ---
 PostgreSQL is a powerful relational database. Relational databases offer a wealth of performance advantages over file-based data storage.
 

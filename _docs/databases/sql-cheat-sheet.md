@@ -1,10 +1,9 @@
 ---
 title: SQL Cheat Sheet
 layout: blog
-topic: databases
 order: 3
-parent: Databases
-parent_path: /databases/
+topic: Databases
+topic_path: /docs/databases/index.html
 ---
 
 These queries are tested in T-SQL on a physical SQL Server.
