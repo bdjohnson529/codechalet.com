@@ -1,10 +1,9 @@
 ---
 title: "External Resources"
 layout: blog
-topic: ruby-on-rails
 order: 10
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 
 * [Dissecting rails migrations](https://blog.appsignal.com/2020/04/14/dissecting-rails-migrationsl.html)

@@ -1,10 +1,9 @@
 ---
 title: "Blocks"
 layout: blog
-topic: ruby-syntax
 order: 2
-parent: Ruby
-parent_path: ruby/
+topic: Ruby
+topic_path: /docs/ruby/index.html
 ---
 Blocks are, well, *blocks* of code which can be passed into methods. A block can be enclosed by `do..end` or by brackets `{..}`. Blocks are often passed to iterators, to perform the same function on members of an array. Consider this code:
 ```ruby
