@@ -2,32 +2,37 @@
 title: "Algorithms"
 layout: blog
 link: "landing"
-parent: Docs
-parent_path: ''
+topic: Algorithms
+topic_path: /docs/algorithms/index.html
 image: algorithms
 ---
+{% assign pages = site.docs | sort: 'order' %}
+
 Common algorithms for learning and practicing computer science.
+
 
 ## Concepts
 <ul>
-{% assign topics = site.docs | where: "topic", "algorithm-concepts" | sort: 'order' %}
-{%- for page in topics -%}
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/concepts" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}
     </a>
   </li>
+  {% endif %}
 {%- endfor -%}
 </ul>
 
 ## Problems
 <ul>
-{% assign topics = site.docs | where: "topic", "algorithm-problems" | sort: 'order' %}
-{%- for page in topics -%}
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/problems" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}
     </a>
   </li>
+  {% endif %}
 {%- endfor -%}
 </ul>
