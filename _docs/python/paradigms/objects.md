@@ -2,9 +2,8 @@
 layout: blog
 title:  "Python Objects"
 order: 3
-topic: python-paradigms
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 The most basic function of a computer program is to store variables in memory, and access those same variables later on in the program. Your Python session uses your computer's Random Access Memory. RAM is very efficient with read and write times, which makes it the ideal candidate for storing program data.

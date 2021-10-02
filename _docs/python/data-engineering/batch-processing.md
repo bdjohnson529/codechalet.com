@@ -1,10 +1,9 @@
 ---
 layout: blog
 title: Batch data processing
-topic: data-engineering
 order: 1
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 Batch processing is the processing of a large volume of data at the same time. Data is collected over a period of time, and then processed all at once. Batch data processing can be contrasted with real-time data processing, where data is processed as it is collected.

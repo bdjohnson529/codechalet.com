@@ -1,10 +1,9 @@
 ---
 title: "Web app primer"
 layout: blog
-topic: flask
 order: 0
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 As a product manager working with web apps, you may find it interesting and helpful to learn web fundamentals. This guide is intended to explain how a website makes its way from a server to the screen on your laptop. No prior knowledge of programming is necessary.
 

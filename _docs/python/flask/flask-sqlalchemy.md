@@ -1,10 +1,9 @@
 ---
 title:  "Flask-SQLAlchemy"
 layout: blog
-topic: flask
 order: 5
-parent: Python
-parent_path: python/
+topic: Python
+topic_path: /docs/python/index.html
 ---
 
 Most web applications use a database to store and maintain application data. It's possible to build a Flask app using a collection of files saving application data in the background (this could be a quick way to prototype); however, using a database on the backend is usually a more sustainable solution.
