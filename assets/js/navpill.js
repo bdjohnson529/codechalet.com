@@ -26,6 +26,26 @@ function FilterTopics(filter) {
 
 }
 
+function HomePage() {
+  // default configuration on page load
+
+  var active_filters = ["featured-button"];
+
+  ResetButtons();
+  MakeButtonsActive(active_filters);
+
+  var active_topics = GetActiveTopicList(filters_topics, active_filters);
+
+  ShowAllTopics();
+
+  // only hide topics if there is a filter selected
+  if (active_topics.length > 0) {
+    HideInactiveTopics(active_topics);
+  }
+
+}
+
+
 function GetSelectedFilters(){
   // build list of selected filters
 
