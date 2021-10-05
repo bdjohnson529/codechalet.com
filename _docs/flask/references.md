@@ -1,8 +1,8 @@
 ---
 title:  "External Resources"
 layout: blog
-topic: Python
-topic_path: /docs/python/index.html
+topic: Flask
+topic_path: /docs/flask/index.html
 ---
 
 * [Starter Site for Flask On Azure Web Apps](http://timmyreilly.azurewebsites.net/starter-site-for-flask-on-azure-web-apps/)

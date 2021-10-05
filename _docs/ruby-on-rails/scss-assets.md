@@ -2,8 +2,8 @@
 title: "SCSS Assets"
 layout: blog
 order: 2
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 Assets can be placed in one of two places, `public`, or `app/assets`. Assets in the `public` folder are served as is, while assets in the `app/assets` folder are precompiled. Most assets we write are going to be precompiled; for example, SCSS files are compiled into CSS.
 

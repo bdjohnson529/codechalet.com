@@ -2,8 +2,8 @@
 title: "Webpacker"
 layout: blog
 order: 1
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 Webpacker is a gem which wraps `webpack`, a Javascript tool for compiling and bundling assets (JS, CSS). When Webpack is executed within a project, it constructs a dependency graph of the Javascript code and generates an output set of Javascript files. These JS files are transferred to the client web browser.
 

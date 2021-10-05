@@ -2,8 +2,8 @@
 title:  "Templates and Jinja"
 layout: blog
 order: 3
-topic: Python
-topic_path: /docs/python/index.html
+topic: Flask
+topic_path: /docs/flask/index.html
 ---
 
 Flask uses templates to render HTML pages. As defined in the [Flask documentation](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/), templates are *files that contain static data as well as placeholders for dynamic data*. The templates folder contains HTML files.

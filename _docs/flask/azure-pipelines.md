@@ -2,8 +2,8 @@
 title: "Azure Pipelines"
 layout: blog
 order: 7
-topic: Python
-topic_path: /docs/python/index.html
+topic: Flask
+topic_path: /docs/flask/index.html
 ---
 Deploying an app can be a tedious process. In a basic deployment scenario, the developer needs to copy the app from a Github repository to the computer where the app is deployed. There are lots of configuration issues which can arise in this situation.
 
