@@ -1,7 +1,7 @@
 ---
 title:  "Javascript variables"
-link: javascript
 layout: blog
+order: 0
 topic: Javascript
 topic_path: /docs/javascript/index.html
 ---

@@ -8,12 +8,12 @@ image: javascript
 ---
 {% assign pages = site.docs | sort: 'order' %}
 
-These are my notes from learning Javascript.
+These are some of my thoughts about building applications with Javascript.
 
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "javascript" %}
-    {% unless page.path contains "index.md" %}
+    {% unless page.path contains "index.md" or page.path contains "references.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">
           {{ page.title | escape }}
@@ -23,3 +23,7 @@ These are my notes from learning Javascript.
   {% endif %}
 {%- endfor -%}
 </ul>
+
+
+## Further Reading
+* [External References](references.html)
