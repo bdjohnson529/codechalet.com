@@ -12,14 +12,12 @@ This site contains resources about different software engineering topics. To sta
 <div class="row">
   {% assign topics = site.docs | where: "link", "landing" | sort: "title" %}
   {% for page in topics %}
-  {% if site.data.settings.featured contains page.topic %}
-    <div class="col-lg-4">
+    <div class="col-lg-4 topic" id="{{ page.topic }}">
       <span>
         <a href="{{ page.url | relative_url }}">
           <img src="{{ site.baseurl }}/assets/img/docs/{{ page.image }}.png" alt="Project image" width="140" height="140">
         </a>
       </span>
     </div>
-  {% endif %}
   {% endfor %}
 </div>
