@@ -44,7 +44,7 @@ These are some notes from learning and teaching Python.
 ## Flask
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "python/flask" %}
+  {% if page.path contains "flask" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">

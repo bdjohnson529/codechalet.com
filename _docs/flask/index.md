@@ -1,10 +1,11 @@
 ---
 title: "Flask"
 layout: blog
-link: "python"
+link: "landing"
 excerpt: "Design patterns for Flask."
-topic: Python
-topic_path: /docs/python/index.html
+topic: Flask
+topic_path: /docs/flask/index.html
+image: flask
 ---
 Flask is a Python framework for building web applications.
 
@@ -24,4 +25,5 @@ Flask is a Python framework for building web applications.
 * [Azure Pipelines](azure-pipelines.html)
 * [Containerization](containerization.html)
 
-## [Further Reading](references.html)
+## Further Reading
+* [External References](references.html)

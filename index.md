@@ -9,6 +9,7 @@ This site contains resources about different software engineering topics. To sta
 <div class="row">
   {% assign topics = site.docs | where: "link", "landing" | sort: "title" %}
   {% for page in topics %}
+  {% if site.data.settings.featured contains page.topic %}
     <div class="col-lg-4">
       <span>
         <a href="{{ page.url | relative_url }}">
@@ -16,5 +17,6 @@ This site contains resources about different software engineering topics. To sta
         </a>
       </span>
     </div>
-  {%- endfor -%}
+  {% endif %}
+  {% endfor %}
 </div>
