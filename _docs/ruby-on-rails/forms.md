@@ -2,8 +2,8 @@
 title: "Forms"
 layout: blog
 order: 6
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 Websites use HTML forms to collect user input. Forms are composed of different input elements, such as `text`, `radio` and `submit`. For example, to gather a user's name and email, you can use a form:
 

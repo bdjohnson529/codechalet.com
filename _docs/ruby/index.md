@@ -44,13 +44,12 @@ These are some of my notes from learning and practicing Ruby.
 {%- endfor -%}
 </ul>
 
-
 ## Ruby on Rails
 Tested on Rails v6.1.3, using Ruby v2.6.7.
 
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "ruby/ruby-on-rails" %}
+  {% if page.path contains "ruby/ruby-syntax" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">

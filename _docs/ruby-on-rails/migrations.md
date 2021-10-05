@@ -2,8 +2,8 @@
 title: "Migrations"
 layout: blog
 order: 0
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 Migrations are a way to alter the database schema over time.
 

@@ -2,8 +2,8 @@
 title: "Tests"
 layout: blog
 order: 8
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 Tests are used to validate our code and ensure it executes as expected. Rails has baked tests into the framework. When you create a model or controller, skeleton test files are generated in the directory `tests`. To execute application tests, run `bin/rails test`.
 

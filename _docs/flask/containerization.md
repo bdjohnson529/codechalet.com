@@ -2,8 +2,8 @@
 title: "Containerization of Flask apps"
 layout: blog
 order: 8
-topic: Python
-topic_path: /docs/python/index.html
+topic: Flask
+topic_path: /docs/flask/index.html
 ---
 Developers often experience problems when deploying software. For every app, there are tens or hundreds of libraries which need to be installed, sometimes in a particular order and with specific version numbers. Each operating system is slightly different, so the process of deploying an app on a new computer can be quite difficult.
 

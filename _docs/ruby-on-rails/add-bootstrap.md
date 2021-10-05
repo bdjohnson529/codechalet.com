@@ -2,8 +2,8 @@
 title: "Bootstrap and Rails"
 layout: blog
 order: 3
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 Note that rails 6 uses webpacker and so bootstrap integration is different from rails 5. This tutorial is transcripted from [Chris Lam's](https://www.youtube.com/watch?v=BIxd501hP-g) video on Youtube.
 

@@ -1,7 +1,7 @@
 ---
 title:  "External Reading"
-link: javascript
 layout: blog
+order: 1
 topic: Javascript
 topic_path: /docs/javascript/index.html
 ---

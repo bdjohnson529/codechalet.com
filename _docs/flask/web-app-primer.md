@@ -2,10 +2,10 @@
 title: "Web app primer"
 layout: blog
 order: 0
-topic: Python
-topic_path: /docs/python/index.html
+topic: Flask
+topic_path: /docs/flask/index.html
 ---
-As a product manager working with web apps, you may find it interesting and helpful to learn web fundamentals. This guide is intended to explain how a website makes its way from a server to the screen on your laptop. No prior knowledge of programming is necessary.
+This guide is intended to explain basic web application architecture to a non-technical audience.
 
 ## Clients and servers
 Computers connected to the web are called clients and servers. Clients make requests, and servers fulfill those requests as responses. Your laptop is the client, and the computer which hosts the website is the server.

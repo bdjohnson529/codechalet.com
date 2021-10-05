@@ -9,11 +9,6 @@ sqlite is a lightweight database, perfect for developing self-contained web appl
 
 
 ## Commands
-Enter dbconsole
-```bash
-rails dbconsole
-```
-
 Select all tables
 ```bash
 .tables

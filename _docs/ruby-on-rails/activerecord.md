@@ -2,8 +2,8 @@
 title: "Active Record"
 layout: blog
 order: 7
-topic: Ruby
-topic_path: /docs/ruby/index.html
+topic: Rails
+topic_path: /docs/ruby-on-rails/index.html
 ---
 [RailsGuides](https://guides.rubyonrails.org/active_record_basics.html) has a great explanation of Active Record. These are some Active Record methods which I find helpful.
 
