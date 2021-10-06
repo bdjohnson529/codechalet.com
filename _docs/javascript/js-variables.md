@@ -1,5 +1,5 @@
 ---
-title:  "Javascript variables"
+title:  "var, let and const"
 layout: blog
 order: 0
 topic: Javascript
@@ -10,7 +10,7 @@ Javascript ES6 was released in 2015, and introduced several new concepts to Java
 
 ## var, let and const
 
-**var** declarations are globally scoped, or locally scoped within a function. Variables declared using **var** are mutable objects, meaning the value can be changed after the variable is initialized. **const** creates an immutable object, which cannot be updated. There is a slight nuance here. The **const** object itself is immutable, but its properties can be changed.
+**var** declarations are either globally scoped, or locally scoped within a function. Variables declared using **var** are mutable objects, meaning the value can be changed after the variable is initialized. **const** creates an immutable object, which cannot be updated. There is a slight nuance here. The **const** object itself is immutable, but its properties can be changed.
 
 When you declare a variable in Javascript, the variable is actually initialized at the top of its scope. If the variable is scoped within a function, it is initialized at the top of the function. If the variable is scoped globally within a file, it is intiialized at the top of the file. This mechanism is called *hoisting*. **let**, **var** and **const** objects are all hoisted. When **var** objects are hoisted, they are simply initialized, but when **let** and **const** objects are hoisted, they are fully defined.
 
