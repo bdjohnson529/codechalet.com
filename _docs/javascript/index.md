@@ -8,7 +8,7 @@ image: javascript
 ---
 {% assign pages = site.docs | sort: 'order' %}
 
-These are some of my thoughts about building applications with Javascript.
+These are some of my thoughts and notes from building applications with Javascript.
 
 <ul>
 {%- for page in pages -%}
