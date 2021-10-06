@@ -31,7 +31,9 @@ Let's say you have a page which displays a set of travel destinations. The user 
 ```
 
 ### Filtering in Javascript
-Our filtering function will add the HTML `hidden` attribute to the `divs` which need to be hidden.
+Our filtering function will add the HTML `hidden` attribute to the `divs` which need to be hidden. We can retrieve a `HTMLCollection` with the containing `divs` by selecting all elements with the class name `destination`. The `getElementsByClassName` API does this quite nicely.
+
+Using another web API, `element.classList.add`, we can add the `hidden` attribute to the `divs` which we don't want to display to the user. We are rendering everything, and then hiding the `divs` which we don't want to see. Of course we could approach this problem the other way round and hide all the divs when the page first loads, and use our Javascript function to show the divs which we want the user to see.
 ```javascript
 function FilterDestinations(filter) {
   // get list of destinations
@@ -54,7 +56,7 @@ function FilterDestinations(filter) {
 ```
 
 ### Adding Buttons
-We can now add two buttons which launch the `FilterDestinations()` function.
+We can now add two buttons which launch the `FilterDestinations()` function. The two buttons will pass different parameters to the Javascript function: one to filter to the US, and the other to filter to the UK.
 ```html
 <button onclick="FilterDestinations('UK')">Filter to UK</buton>
 <button onclick="FilterDestinations('US')">Filter to US</buton>
@@ -65,4 +67,4 @@ In this way, the user can filter the results displayed on a page, and we do not 
 ## Limitations
 This method will have limited effectiveness when the data on the page grows in size. For a few dozen entries, the serverless option will do just fine. However, if you were filtering thousands of destinations, it would not make sense to render all of them and then hide the ones which are not selected. Load times would be slow, and there is a more efficient way to solve that problem.
 
-For blogs or other small website, this technique works great!
+For blogs or other small websites, this technique works great!
