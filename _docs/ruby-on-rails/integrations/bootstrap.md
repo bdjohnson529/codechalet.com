@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap and Rails"
+title: "Bootstrap"
 layout: blog
 order: 3
 topic: Rails

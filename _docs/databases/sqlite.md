@@ -18,3 +18,8 @@ List schema for TABLE
 ```bash
 .schema TABLE
 ```
+
+Quit sqlite interpreter
+```bash
+CTRL + D
+```
