@@ -35,6 +35,12 @@ source_path: app/javascript
 source_entry_path: packs
 ```
 
+If you configure Webpacker to compile your SCSS assets as well, you will end up placing CSS files in this folder. You may want to change the name of the folder to `app/frontend` or something which describes both javascript and CSS. If you do this, modify the `source_path` line of the `webpacker.yml` file. You will also want to change the link to the `application` stylesheet, within `application.html.erb`, from `stylesheet_link_tag` to `stylesheet_pack_tag`, since your stylesheets will now be compiled into a Webpacker *pack*.
+
+```html
+<%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+```
+
 # Plugins
 The Webpack API has a [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) function which automatically loads modules. To integrate a third-party Javascript library into your app, use `ProvidePlugin` within `config/webpack/environment.js`. For example, to include JQuery,
 
@@ -52,10 +58,6 @@ environment.plugins.prepend(
 
 module.exports = environment;
 ```
-
-
-
-
 
 ## Further reading
 * [Disable cache on Chrome](https://www.technipages.com/google-chrome-how-to-completely-disable-cache)

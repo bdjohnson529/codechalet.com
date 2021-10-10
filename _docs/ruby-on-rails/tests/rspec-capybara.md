@@ -1,11 +1,11 @@
 ---
-title: "RSpec and Capybara"
+title: "RSpec"
 layout: blog
 order: 0
 topic: Rails
 topic_path: /docs/ruby-on-rails/index.html
 ---
-Rspec and Capybara are testing frameworks which can be used in Rails. Here are some resources to help you write rspec tests:
+Rspec is a testing framework which can be used as an alternative to the Rails-default minitest. Here are some resources to help you write rspec tests:
 
 * [RSpec matchers](https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
 
