@@ -2,7 +2,7 @@
 ---
 
 const filters_topics = {"featured-button" : [ '{{ site.data.settings.featured | join: "', '" }}' ],
-                        "tutorials-button" : [ '{{ site.data.settings.tutorials | join: "', '" }}' ]
+                        "languages-button" : [ '{{ site.data.settings.languages | join: "', '" }}' ]
                        }
 
 function FilterTopics(filter) {
