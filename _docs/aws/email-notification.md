@@ -1,5 +1,5 @@
 ---
-title:  "Serverless email notifications"
+title:  "Sending emails with SES and Lambda"
 layout: blog
 order: 0
 topic: AWS
@@ -73,35 +73,6 @@ exports.handler = async function (event) {
 };
 ```
 
-Our Lambda function is now capable of transmitting an email message to the `phil@fake.com`. Of course you may want to replace Phil's email address with your own. Once you have done this, let's test the function. You can do this by clicking the Test button in the AWS web editor.
+Our Lambda function is now capable of transmitting an email message to the `phil@fake.com`. Of course you may want to replace Phil's email address with your own. Once you have done this, let's test the function. You can do this by clicking the Test button in the AWS web editor. Note that you need to manually deploy your code within the Lambda editor, by clicking the Deploy button.
 
 You should receive an email. It may be in your Spam folder, because the email sender was listed as your account, but the message was delivered by SES. We will work to clear this up later.
-
-
-
-# HTML Form
-This is an HTML form you can use to collect information from the user.
-
-<button onClick="ToggleElement('show-code-1')" class="btn btn-info">
-  Show HTML Form
-</button>
-
-
-<div markdown="1" id="show-code-1" class="d-none">
-
-```html
-<form id="target">
-  <label for="inputName"">Name</label>
-  <input type="text" id="inputName" placeholder="Enter your name." required>
-
-  <label for="inputEmail">Email</label>
-  <input type="email" id="inputEmail" placeholder="Enter your email." required>
-
-  <label for="inputDescription">Email</label>
-  <textarea rows="5" id="inputDescription" placeholder="How can I help?" required>
-  </textarea>
-
-  <input type="submit" value="Request Quote" class="btn btn-primary">
-</form>
-```
-</div>
