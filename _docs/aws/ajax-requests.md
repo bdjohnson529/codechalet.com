@@ -1,16 +1,11 @@
 ---
-title:  "Transmitting data via AJAX"
+title:  "AJAX Requests"
 layout: blog
-order: 0
+order: 4
 topic: AWS
 topic_path: /docs/aws/index.html
 ---
-This is the second part of the guide to building a serverless notification system using AWS. The first step explained how to construct a Lambda function, and how to send an email using AWS Lambda. This page will explain how to transmit data in AJAX requests from the client to our AWS Lambda function.
-
-## API Gateway
-API Gateway can deploy REST, HTTP, and Websocket APIs at any scale. It is one of the [Serverless](https://aws.amazon.com/serverless/) services which AWS offers, and in this case, we will use it to deploy our Lambda function. By using API Gateway, we can avoid maintaining servers. The tradeoff in this case is detailed control over how the API is deloyed.
-
-Phil the Painter has between 100 and 1000 customers who will be contacting him each month. Scalability is not an issue in this situation. Lucky us, we can save money on servers.
+This is the third part of the guide explaining how to build a serverless notification system using AWS. In the first chapter, we built a Lambda function which is capable of sending an email via SES. In the second chapter, we created an API Gateway to invoke the Lambda function. In this chapter we will learn how to transmit data in AJAX requests from the client to API Gateway.
 
 ## HTML Form
 Phil has specified the HTML form which he wants to use on his website. Go Phil! Take this form and add it to your static site. The form will collect data from the user.
@@ -60,3 +55,8 @@ $(document).ready(function(){
 
 ## AJAX Request
 Now that we have collected the form values, we need to package them into a request.
+
+
+<br>
+<a href="/docs/aws/api-gateway.html"
+   class="btn-lg btn-secondary">Previous</a>

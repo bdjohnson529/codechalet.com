@@ -13,7 +13,7 @@ Deploy static websites on AWS, it's cheap! Combined with some serverless concept
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "aws" %}
-    {% unless page.path contains "index.md" or page.path contains "references.md" %}
+    {% unless page.path contains "index.md" or page.path contains "references.md" or page.path contains "sample-authorization-function" %}
       <li>
         <a href="{{ page.url | relative_url }}">
           {{ page.title | escape }}
