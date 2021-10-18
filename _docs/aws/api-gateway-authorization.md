@@ -68,5 +68,5 @@ If you make a request with the authtoken header, you should be able to trigger y
 <br>
 <a href="/docs/aws/api-gateway.html"
    class="btn-lg btn-secondary">Previous</a>
-<a href="/docs/aws/ajax-requests.html"
+<a href="/docs/aws/client-requests.html"
    class="btn-lg btn-primary">Next</a>

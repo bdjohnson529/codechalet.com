@@ -1,11 +1,9 @@
 ---
 title:  "HTML Forms"
 layout: blog
-order: 5
 topic: AWS
 topic_path: /docs/aws/index.html
 ---
-## HTML Form
 Phil has specified the HTML form which he wants to use on his website. Go Phil! Take this form and add it to your static site. The form will collect data from the user.
 
 ```html
