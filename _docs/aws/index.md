@@ -1,30 +1,33 @@
 ---
-title: "AWS"
+title: "Go Serverless"
 layout: blog
 link: "landing"
 topic: AWS
 topic_path: /docs/aws/index.html
 image: aws
 ---
-{% assign pages = site.docs | sort: 'order' %}
-
-Deploy static websites on AWS, it's cheap! Combined with some serverless concepts, and it is possible to create a powerful ecommerce website.
 
 <br>
 
-### Serverless Email Notification System
-This guide explains how to build an email notification system for a static website, using serverless resources such **Lambda** and **API Gateway**.
+## It's cheap!
+
+<br>
+With a serverless architecture, you only pay for the resources you use. Go serverless and save money!
+
+
+
+
+## Serverless Architectures
 
 <ul>
+{% assign pages = site.docs | sort: 'order' %}
 {%- for page in pages -%}
-  {% if page.path contains "aws" %}
-    {% unless page.path contains "index.md" or page.path contains "references.md" or page.path contains "sample-authorization-function" or page.path contains "html-forms" %}
-      <li>
-        <a href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </li>
-    {% endunless %}
+  {% if page.path contains "aws/tutorials/index" %}
+    <li>
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title | escape }}
+      </a>
+    </li>
   {% endif %}
 {%- endfor -%}
 </ul>
