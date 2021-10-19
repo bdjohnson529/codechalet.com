@@ -95,8 +95,22 @@ The next step is to test the execution of the Lambda function via API Gateway. N
 
 Click the blue "Test" button at the bottom of the page. If the Lambda function executes successfully, the response body will be visible. You can also view the status code (which should be 200) and the execution logs.
 
+## CORS
+Now that we have created a resource to handle the `POST` request, we will need to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) on the resource. CORS is a protocol that governs how endpoints respond to requests from other websites. In particular, CORS is going to verify the presence of three headers in the API's response: `Access-Control-Allow-Headers`, `Access-Control-Allow-Origin`, and `Access-Control-Allow-Methods`.
+
+Many browsers will make a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request) before issuing a CORS request, to ensure that the server is aware of CORS. The preflight request is an `OPTIONS` request, and the browser will verify the response before issuing the `POST` request. If the server issues an incomplete or missing response to the `OPTIONS` request, the browser will skip the `POST` request.
+
+Use the AWS Console to enable CORS. Select the **Resources** pane. Within the **Actions** menu, select the option **Enable CORS**. You'll need to add the header `authtoken` to the list of `Access-Control-Allow-Headers`. You will also be able to see that there are two `Access-Control-Allow-Methods`: `POST`, and `OPTIONS`. The CORS wizard is going to add the `OPTIONS` resource for us, so that our API can fulfill the preflight request.
+
+<div class="container">
+  <button onClick="PlayGif('gif-1')" class="btn-lg btn-secondary">
+    <i class="fa fa-play"></i>
+  </button>
+  <img src="{{ site.baseurl }}/assets/img/docs/aws/apigateway-cors.gif" alt="API Gateway CORS">
+</div>
+
 <br>
-<a href="/docs/aws/lambda-functions.html"
+<a href="/docs/aws/tutorials/lambda-functions.html"
    class="btn-lg btn-secondary">Previous</a>
-<a href="/docs/aws/api-gateway-authorization.html"
+<a href="/docs/aws/tutorials/api-gateway-authorization.html"
    class="btn-lg btn-primary">Next</a>

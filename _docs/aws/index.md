@@ -8,16 +8,24 @@ image: aws
 ---
 
 <br>
+It's cheap! With a serverless architecture, you only pay for the resources you use. Go serverless and save money!
 
-## It's cheap!
+## Guides
 
-<br>
-With a serverless architecture, you only pay for the resources you use. Go serverless and save money!
+<ul>
+{% assign pages = site.docs | sort: 'order' %}
+{%- for page in pages -%}
+  {% if page.path contains "aws/cli" %}
+    <li>
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title | escape }}
+      </a>
+    </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
 
-
-
-
-## Serverless Architectures
+## Designs
 
 <ul>
 {% assign pages = site.docs | sort: 'order' %}

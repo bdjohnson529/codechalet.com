@@ -97,5 +97,5 @@ Our Lambda function is now capable of transmitting an email message to the `phil
 You should receive an email. It may be in your Spam folder, because the email sender was listed as your account, but the message was delivered by SES. We will work to clear this up later.
 
 <br>
-<a href="/docs/aws/api-gateway.html"
+<a href="/docs/aws/tutorials/api-gateway.html"
    class="btn-lg btn-primary">Next</a>

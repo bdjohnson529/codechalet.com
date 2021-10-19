@@ -13,12 +13,12 @@ This is the fourth chapter of the guide explaining how to build a serverless not
 In this chapter we will learn how to make a request from the client browser to the API.
 
 ## Fetch API
-We will be using Javascript in the client browser to make the request to our API Gateway. Specifically, we will use the [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to make an HTTP request. Let's start by constructing an asynchronous function to make a POST request. For now, we will configure the request by disabling [`CORS`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). We will also add a `authtoken` parameter to the header so that the request will be authorized.
+We will be using Javascript in the client browser to make the request to our API Gateway. Specifically, we will use the [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to make an HTTP request. Let's start by constructing an asynchronous function to make a POST request. Notice that we are once again making use of the `await` operator. Fetch is asynchronous, so we need to block the execution of the `postRequest` function until our `fetch` request is completed.
 ```javascript
 async function postRequest(url = '', data = {}) {
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'no-cors',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
       'authtoken': 'supersecretvalue'
@@ -30,9 +30,9 @@ async function postRequest(url = '', data = {}) {
 }
 ```
 
-Notice that we are once again making use of the `await` operator. Fetch is asynchronous, so we need to block the execution of the `postRequest` function until our `fetch` request is completed.
 
-We probably want to encapsulate the `postRequest` function in another function, which will be called directly by an the button which the user clicks to submit the form. That way, we can interpret the response and add logic which notifies the user that the form has been submitted. Let's create an addition function, `triggerAPI`, which calls `postRequest`.
+
+We probably want to encapsulate the `postRequest` function in another function, which will be called directly by the button which the user clicks to submit the form. That way, we can interpret the response and add logic which notifies the user that the form has been submitted. Let's create an addition function, `triggerAPI`, which calls `postRequest`.
 ```javascript
 function triggerAPI() {
   var url = "https://api-gateway-prod-stage-url";
@@ -53,5 +53,5 @@ Somewhere on our site, we can add an HTML button which triggers our Javascript f
 Now, you can use the button to trigger the API! When you click the button, you should receive an email in your inbox. Voila!
 
 <br>
-<a href="/docs/aws/api-gateway-authorization.html"
+<a href="/docs/aws/tutorials/api-gateway-authorization.html"
    class="btn-lg btn-secondary">Previous</a>

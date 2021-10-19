@@ -5,7 +5,7 @@ topic: AWS
 topic_path: /docs/aws/index.html
 image: aws
 ---
-This guide explains how to build an email notification system for a static website, using serverless resources such **Lambda** and **API Gateway**.
+This guide explains how to build an email notification system for a static website, using serverless resources such as **Lambda** and **API Gateway**.
 
 <ul>
 {% assign pages = site.docs | sort: 'order' %}
