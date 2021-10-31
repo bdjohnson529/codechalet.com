@@ -1,5 +1,5 @@
 ---
-title: "Go Serverless"
+title: "AWS"
 layout: blog
 link: "landing"
 topic: AWS
@@ -7,10 +7,6 @@ topic_path: /docs/aws/index.html
 image: aws
 ---
 
-<br>
-It's cheap! With a serverless architecture, you only pay for the resources you use. Go serverless and save money!
-
-## Guides
 
 <ul>
 {% assign pages = site.docs | sort: 'order' %}

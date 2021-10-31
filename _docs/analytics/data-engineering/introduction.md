@@ -1,9 +1,9 @@
 ---
-title: "What is data engineering?"
+title: "Introduction"
 layout: blog
 order: 0
-topic: Python
-topic_path: /docs/python/index.html
+topic: Analytics
+topic_path: /docs/analytics/index.html
 ---
 At its core, data engineering is organizing datasets so they can be consumed by software. Don't let this simple definition fool you - data engineering is a sometimes Herculean effort which can involve lots of tedious programming. Data engineering is the older, less attractive relative of data science; if you ask programmers and analysts how they would like to spend their time they will probably tell you about building machine learning models, rather than organizing massive datasets.
 

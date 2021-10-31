@@ -1,6 +1,6 @@
 ---
 layout: blog
-title:  "Python Dictionaries"
+title:  "Dictionaries"
 order: 2
 topic: Python
 topic_path: /docs/python/index.html

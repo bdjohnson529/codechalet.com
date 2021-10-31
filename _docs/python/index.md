@@ -11,7 +11,7 @@ image: python
 These are some notes from learning and teaching Python.
 
 
-## Python Paradigms
+### Data Structures
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "python/paradigms" %}
@@ -26,25 +26,10 @@ These are some notes from learning and teaching Python.
 {%- endfor -%}
 </ul>
 
-## Data Engineering
+### Testing
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "python/data-engineering" %}
-    {% unless page.path contains "index.md" %}
-      <li>
-        <a href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </li>
-    {% endunless %}
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-## Flask
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "flask" %}
+  {% if page.path contains "python/tests" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">

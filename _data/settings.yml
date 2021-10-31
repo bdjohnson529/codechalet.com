@@ -1,10 +1,9 @@
 featured:
-  - AWS
+  - Analytics
   - Databases
-  - Docker
-  - Javascript
   - Ruby on Rails
   - Flask
+  - Python
 
 languages:
   - Python

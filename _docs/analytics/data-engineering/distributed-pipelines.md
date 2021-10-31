@@ -1,11 +1,10 @@
 ---
 layout: blog
-title: Distributed pipelines in PySpark
+title: Spark Pipelines
 order: 3
-topic: Python
-topic_path: /docs/python/index.html
+topic: Analytics
+topic_path: /docs/analytics/index.html
 ---
-### What is distributed computing?
 There are many cases when we we need to perform a computation, or some sort of processing, on a large dataset. Consider, for example, a dataset with one million rows (a modest size in the context of big data). Let's say we have a computation which takes 1 second to perform. If we run the calculation on a single processor, the calculation will take 277 hours to complete.
 
 Distributed computing solves this problem. Just as multi-threaded programs empower parallel computations on the same processor, distributed computing empowers parallel computations on a distributed network of computers. [Apache Spark](https://spark.apache.org/docs/latest/quick-start.html) is a programming framework which facilitates distributed computing. In a nutshell, the driver program generates tasks for each one of the executors. The executors complete the assigned tasks and then send the result back to the driver.

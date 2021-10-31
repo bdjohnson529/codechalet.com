@@ -1,6 +1,6 @@
 ---
 layout: blog
-title:  "Python Lists"
+title:  "Lists"
 order: 1
 topic: Python
 topic_path: /docs/python/index.html

@@ -1,13 +1,11 @@
 ---
 layout: blog
-title: SQL Unit Testing
+title: Partition Testing
 order: 2
-topic: Python
-topic_path: /docs/python/index.html
+topic: Analytics
+topic_path: /docs/analytics/index.html
 ---
 All software teams face the common challenge of adding code to a source code base without breaking the code which already exists. Software engineers have traditionally solved this problem by executing unit tests which are run before new code is deployed to production. The unit tests verify that each "unit" of code executes properly.
-
-Python has its own [unit testing framework](https://docs.python.org/3/library/unittest.html), consisting of [assertions](https://docs.python.org/3/library/unittest.html#assert-methods) which can be used to test the validity of Python code. The basic unit of testing, a test case, is a section of code which is executed and returns a value. The return value of the test case is evaluated against an expected value; if the return value equals the expected value, the test case passes. However, if the return value differs from the expected value, the test case fails.
 
 Our source code is used to transform tables in SQL - the output of our code is a collection of tables in SQL. In our case, the goal of our unit tests was to validate the data in our SQL tables, rather than to validate the functionality of our Python code. Specifically, we used the concept of unit testing to validate the following attributes of our output tables in SQL:
 

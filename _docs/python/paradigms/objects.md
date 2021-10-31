@@ -1,6 +1,6 @@
 ---
 layout: blog
-title:  "Python Objects"
+title:  "Objects"
 order: 3
 topic: Python
 topic_path: /docs/python/index.html

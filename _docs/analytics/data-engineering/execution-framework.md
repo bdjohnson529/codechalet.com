@@ -1,21 +1,11 @@
 ---
 layout: blog
-title: Batch data processing
+title: Structuring Jobs
 order: 1
-topic: Python
-topic_path: /docs/python/index.html
+topic: Analytics
+topic_path: /docs/analytics/index.html
 ---
-
-Batch processing is the processing of a large volume of data at the same time. Data is collected over a period of time, and then processed all at once. Batch data processing can be contrasted with real-time data processing, where data is processed as it is collected.
-
-Most data processing jobs in the data warehouse are batch processing jobs. Unless you are working with streaming data, chances are, a large batch of data is loaded into your data warehouse for further processing. Computation resources can be optimized for batch processing jobs, for example, Spark parellelizes your code to run on large batches of data.
-
-Most AI and ML algorithms also work with large batches of data. By nature, machine learning models are only effective when they are used with large datasets. One batch of data is used to train the model, another batch of data is used to test the model, and finally, the model is used to evaluate another batch of data.
-
-This style guide introduces a framework for structuring production batch data processing jobs. We tried to keep the framework general so it would remain relevant for different programming languages.
-
-# **The Framework**
-With no further ado... here are some Pythonic solutions for batch data processing.
+This style guide introduces a framework for structuring production batch data processing jobs. I tried to keep the framework general so it would remain relevant for different programming languages.
 
 ### **1. Single Point of Execution**
 Batch processing jobs are going to be executed on many different computers. The entire batch processing job should be executed from a single script. Batch files are great in Windows, and shell scripts work with Linux. Throw em all in there, at the base directory of the repo.
