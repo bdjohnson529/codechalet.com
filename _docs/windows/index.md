@@ -22,4 +22,14 @@ Notes from configuring Windows for software development.
 
 
 ## Sublime
-* [Python linting in Sublime](python-linting.html)
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "windows/sublime" %}
+  <li>
+    <a href="{{ page.url | relative_url }}">
+      {{ page.title | escape }}
+    </a>
+  </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
