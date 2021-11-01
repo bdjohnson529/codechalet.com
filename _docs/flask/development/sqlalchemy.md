@@ -1,5 +1,5 @@
 ---
-title:  "Flask-SQLAlchemy"
+title:  "SQLAlchemy"
 layout: blog
 order: 5
 topic: Flask

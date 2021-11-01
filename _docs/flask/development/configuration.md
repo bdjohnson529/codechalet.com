@@ -1,5 +1,5 @@
 ---
-title:  "SQLite and config variables"
+title:  "Configuration variables"
 layout: blog
 order: 6
 topic: Flask

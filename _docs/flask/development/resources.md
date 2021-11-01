@@ -5,7 +5,6 @@ order: 2
 topic: Flask
 topic_path: /docs/flask/index.html
 ---
-
 Routing is the mechanism by which HTTP requests are routed to the code which handles them. When a user visits the page `/home`, their computer makes an HTTP request to the server. Routing will determine what happens from there.
 
 When building an app, a good first step is to map out all of the possible HTTP requests. The most common kind of request is a `GET` request - for example, accessing a homepage might be a `GET` request. Likely you will have some combination of `GET` and `PUT` requests. Each of these requests needs to be mapped to a Python function  using the Flask `route` decorator.

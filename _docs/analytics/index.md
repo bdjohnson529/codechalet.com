@@ -22,3 +22,16 @@ Notes from building analytics platforms.
   {% endif %}
 {%- endfor -%}
 </ul>
+
+### Airflow
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "analytics/airflow" %}
+    <li>
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title | escape }}
+      </a>
+    </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
