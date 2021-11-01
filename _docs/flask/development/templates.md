@@ -1,5 +1,5 @@
 ---
-title:  "Templates and Jinja"
+title:  "Templates"
 layout: blog
 order: 3
 topic: Flask

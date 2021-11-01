@@ -1,5 +1,5 @@
 ---
-title:  "App Entry Point"
+title:  "Application Entry Point"
 layout: blog
 order: 1
 topic: Flask
