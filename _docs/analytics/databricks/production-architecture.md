@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Production Databricks
+title: Production Architecture
 order: 0
 topic: Analytics
 topic_path: /docs/analytics/index.html
