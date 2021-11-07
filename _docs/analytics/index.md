@@ -23,6 +23,19 @@ Notes from building analytics platforms.
 {%- endfor -%}
 </ul>
 
+### Databricks
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "analytics/databricks" %}
+    <li>
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title | escape }}
+      </a>
+    </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
 ### Airflow
 <ul>
 {%- for page in pages -%}
