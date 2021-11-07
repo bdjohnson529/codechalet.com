@@ -1,9 +1,17 @@
-featured:
+analytics:
   - Analytics
-  - Databases
+
+serverless:
+  - AWS
+
+development:
+  - Git CLI
+  - Windows
+
+webapplications:
   - Ruby on Rails
   - Flask
-  - Python
+  - Databases
 
 languages:
   - Python

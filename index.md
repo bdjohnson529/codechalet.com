@@ -2,7 +2,7 @@
 layout: home
 ---
 # Welcome to Code Chalet!
-This site contains resources about different software engineering topics. To start, click a topic which interests you. Some personal favorites are the [Python](/docs/python/index.html) tutorials and the [Git](/docs/gitcli/index.html) cheat sheets.
+This site contains resources about different technical topics. To start, click a topic which interests you. Some personal favorites are the [Python](/docs/python/index.html) tutorials and the [Git](/docs/gitcli/index.html) cheat sheets.
 
 
 {% include navpill.html %}

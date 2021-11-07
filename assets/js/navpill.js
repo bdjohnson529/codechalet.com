@@ -1,8 +1,11 @@
 ---
 ---
 
-const filters_topics = {"featured-button" : [ '{{ site.data.settings.featured | join: "', '" }}' ],
-                        "languages-button" : [ '{{ site.data.settings.languages | join: "', '" }}' ]
+const filters_topics = {"analytics-button" : [ '{{ site.data.settings.analytics | join: "', '" }}' ],
+                        "languages-button" : [ '{{ site.data.settings.languages | join: "', '" }}' ],
+                        "development-button" : [ '{{ site.data.settings.development | join: "', '" }}' ],
+                        "serverless-button" : [ '{{ site.data.settings.serverless | join: "', '" }}' ],
+                        "webapplications-button" : [ '{{ site.data.settings.webapplications | join: "', '" }}' ]
                        }
 
 function FilterTopics(filter) {
@@ -29,7 +32,7 @@ function FilterTopics(filter) {
 function HomePage() {
   // default configuration on page load
 
-  var active_filters = ["featured-button"];
+  var active_filters = ["analytics-button"];
 
   ResetButtons();
   MakeButtonsActive(active_filters);
@@ -61,7 +64,6 @@ function GetSelectedFilters(){
 
 function GetActiveFilters(selected_filters, clicked_filter) {
   // constructs a list of active filters
-
   var active_filters = []
 
   if (selected_filters.includes(clicked_filter)) {
