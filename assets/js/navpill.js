@@ -32,7 +32,7 @@ function FilterTopics(filter) {
 function HomePage() {
   // default configuration on page load
 
-  var active_filters = [];
+  var active_filters = ["analytics-button"];
 
   ResetButtons();
   MakeButtonsActive(active_filters);

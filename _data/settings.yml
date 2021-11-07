@@ -1,5 +1,6 @@
 analytics:
   - Analytics
+  - Bayesian Statistics
 
 serverless:
   - AWS
