@@ -9,17 +9,15 @@ The binomial distribution measures the number of successes in an experiment whic
 
 $$ P(x,n,p) = {n \choose x} p^x (1-p)^{(n-x)} $$
 
-The binomial distribution assumes independence between each experiment. With a coin flip, this is an assumption we are willing to make, though as Richard McElreath points out, physical events are deterministic and therefore the previous coin flip does influence the subsequent experiments. This could be debated but for our purposes, we will accept independence between coin flip experiments.
-
-Let's plot `P(x)`, for 7 coin flips. In this case `x` represents the number of successes in our experiment. We can use `P(x)` to compute the probability of each outcome - in this case, there are only 7 possible outcomes. First, initialize an array to represent the discrete values of `x`.
+The binomial distribution assumes independence between each experiment. Let's plot `P(x)`, for 7 coin flips. In this case `x` represents the number of successes in our experiment. We can use `P(x)` to compute the probability of each outcome - in this case, there are only 7 possible outcomes. First, initialize an array to represent the discrete values of `x`.
 
 ```r
-x <- 0:7
+x <- 0:100
 ```
 
 Now, compute the array of probabilities for each outcome.
 ```r
-y <- dbinom(x, size=7, prob=0.5)
+y <- dbinom(x, size=100, prob=0.5)
 ```
 
 Plot `x` against `y` to see the probability density function.
@@ -86,6 +84,7 @@ Let's take 10,000 samples from the posterior distribution. We are sampling the v
 
 ```r
 samples <- sample( p_grid , prob=posterior , size=1e4 , replace=TRUE )
+hist(samples)
 ```
 
 Each value in the `samples` vector is one of the discrete parameter values specified in `p_grid`. Let's create a histogram of the samples drawn from the posterior distribution.
@@ -94,3 +93,8 @@ Each value in the `samples` vector is one of the discrete parameter values speci
      alt="Samples Histogram"
      width=500px
      height="100%">
+
+### Interpreting the Model
+The posterior distribution gives us the likelihood of different parameter values. If we were to predict the results of the next 100 coin flips, we could use the posterior distribution to select a parameter value to use in our calculations. In this simple experiment, the most likely parameter value is 0.77, as the posterior distribution is entirely formed by the data (recall the prior was a uniform distribution).
+
+There are definite limitations to our model. The model assumes independence between events, but we know that the physical world is deterministic and a past flip of the coin could influence future coin flips. In his book *Statistical Rethinking*, Richard McElreath points out that physical events are deterministic and therefore past events can influence future events. This could inspire a debate on free will but for our purposes, suffice it to say that the assumption of independence is questionable.
