@@ -20,7 +20,7 @@ Now, compute the array of probabilities for each outcome.
 y <- dbinom(x, size=100, prob=0.5)
 ```
 
-Plot `x` against `y` to see the probability density function.
+Plot `x` against `y` to see the probability mass function.
 ```r
 plot(x, y, type='h')
 ```
@@ -52,7 +52,7 @@ plot(x, prior)
 ### Likelihood
 Your friend flips the coin, and out of 100 coin flips, 77 are heads. This is the experiment data, and we can use it to update the prior. In Bayesian analyis, we use the experiment data to compute the likelihood of each prior prediction. Essentially, we are using data to update our model of the world.
 
-Let's use a grid analysis to perform a numerical analysis. First, instantiate a vector with 1000 evenly-spaced values between 0 and 1, to represent the probability `p` of the coin landing on heads. Then, compute the *likelihood* of that value of `p`, using the binomial density function. Note in the code below that since we pass a vector into `dbinom()`, the result is also computed as a vector.
+Let's use a grid analysis to perform a numerical analysis. First, instantiate a vector with 1000 evenly-spaced values between 0 and 1, to represent the probability `p` of the coin landing on heads. Then, compute the *likelihood* of that value of `p`, using the binomial probability mass function. Note in the code below that since we pass a vector into `dbinom()`, the result is also computed as a vector.
 
 ```r
 p_grid <- seq( from=0 , to=1 , length.out=1000 )
@@ -78,7 +78,7 @@ plot(x, posterior)
      height="100%">
 
 ### Sampling the Posterior
-In our case, the posterior distribution has an analytic solution (at this point the posterior can be represented by the binomial probability density function, since the posterior was formed by multiplying a uniform prior and the likelihood). However, in more complex Bayesian models, the posterior does not have a simple solution. It can be computatationally expensive to even calculate the posterior distribution. In this case we can approximate the posterior distribution by sampling it.
+In our case, the posterior distribution has an analytic solution (at this point the posterior can be represented by the binomial probability mass function, since the posterior was formed by multiplying a uniform prior and the likelihood). However, in more complex Bayesian models, the posterior does not have a simple solution. It can be computatationally expensive to even calculate the posterior distribution. In this case we can approximate the posterior distribution by sampling it.
 
 Let's take 10,000 samples from the posterior distribution. We are sampling the values of the parameter `p`, which represents the probability that the coin will land on heads. Recall the vector `p_grid` represents 1000 discrete parameter values, and the vector `posterior` represents the plausability of each parameter value.
 
