@@ -98,3 +98,7 @@ Each value in the `samples` vector is one of the discrete parameter values speci
 The posterior distribution gives us the likelihood of different parameter values. If we were to predict the results of the next 100 coin flips, we could use the posterior distribution to select a parameter value to use in our calculations. In this simple experiment, the most likely parameter value is 0.77, as the posterior distribution is entirely formed by the data (recall the prior was a uniform distribution).
 
 There are definite limitations to our model. The model assumes independence between events, but we know that the physical world is deterministic and a past flip of the coin could influence future coin flips. In his book *Statistical Rethinking*, Richard McElreath points out that physical events are deterministic and therefore past events can influence future events. This could inspire a debate on free will but for our purposes, suffice it to say that the assumption of independence is questionable.
+
+The prior distribution could also be improved. Physics makes it extremely unlikely that the coin would have a 99% probability of landing on heads. Extreme parameter values are unlikely, but our prior distribution treats 0.99 and 0.70 as equally plausible.
+
+The next time your friend wants to play the game, you can use your posterior distribution to make a prediction! After the game, you can use the new experiment data to update the model. The current posterior would become your new prior, and it can be updated using new experiment data.
