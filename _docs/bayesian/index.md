@@ -12,23 +12,33 @@ Notes from learning Bayesian Statistics.
 
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "bayesian" %}
-    {% unless page.path contains "index" or page.path contains "/r" %}
-      <li>
-        <a href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </li>
-    {% endunless %}
+  {% if page.path contains "bayesian/references" %}
+    <li>
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title | escape }}
+      </a>
+    </li>
   {% endif %}
 {%- endfor -%}
 </ul>
 
-# R
-Notes from learning R.
+### Distributions
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "bayesian/r" %}
+  {% if page.path contains "bayesian/distributions" %}
+    <li>
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title | escape }}
+      </a>
+    </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
+### Analyses
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "bayesian/analyses" %}
     <li>
       <a href="{{ page.url | relative_url }}">
         {{ page.title | escape }}
