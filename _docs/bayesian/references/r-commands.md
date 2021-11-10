@@ -21,6 +21,12 @@ typeof(d)
 nrow(d)
 ```
 
+`d[ d$col == 'condition' ]`
+: Filter dataframe `d` by column `col`
+```
+d2 <- d[ d$col == 'condition' ]
+```
+
 <br>
 # Vectors
 `list()`

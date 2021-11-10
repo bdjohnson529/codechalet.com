@@ -11,36 +11,49 @@ The hourly datset includes 17,379 observations, representing approximately 8760 
 
 My hypothesis is that temperature can be used to predict the count of rental bikes. When the temperature increases, the count of rental bikes will also increase. This hypothesis is motivated by my own experience as a bike rider who does not particularly enjoy biking in cold weather.
 
+## Linear Model
+I will use a linear Bayesian model to represent the relationship between an observed temperature $$ t_i $$, and and observed bike count $$ x_i $$. Notice that each of our parameters is defined as a stochastic distribution - this is a feature of Bayesian analyses. The only parameter which is not defined as a distribution is $$ \mu $$, and that is because $$ \mu $$ is defined entirely in terms of other stochastic parameters.
+
+$$
+x_i \sim Normal(\mu, \sigma)
+\\ \mu = \alpha + \beta (t_i - \bar t)
+\\ \alpha \sim Normal(400,100)
+\\ \beta \sim Normal(0, 100)
+\\ \sigma \sim Uniform(0, 200)
+$$
+
 ## Likelihood
-Let's build a linear Bayesian model to represent the relationship between our parameters. Let's define the observable parameter $$ x_i $$ as the bike count at observation $$ i $$, and $$ t_i $$ as the normalized temperature at observation $$ i $$. We will use a normal distribution to model the parameter $$ x_i $$. This is the **likelihood function** - it is the probability of the data $$ x_i $$, given the parameters $$ \mu $$ and $$ \sigma $$. 
+The first equation in the model is the **likelihood function** - it is the probability of the data $$ x_i $$, given our prior beliefs. I constructed the likelihood function as a normal distribution, because I did not have a good reason to use a different type of distribution.
 
 $$
 x_i \sim Normal(\mu, \sigma)
 $$
 
-The parameters $$ \mu $$ and $$ \sigma $$ are not observed, and we will need to construct a prior belief about their distribution. First, let's define $$ \mu $$ in terms of the other observable parameter, temperature. This relation is our **linear model**.
+As Richard McElreath points out in his book *Statistical Rethinking*, the normal distribution is a good first order approximation to many stochastic processes because of the [central limit theorem](https://en.wikipedia.org/wiki/Central_limit_theorem), which states that observations of independent random variables tend towards a normal distribution.
+
+Our likelihood function is defined by two parameters, the mean $$ \mu $$ and the variance $$ \sigma $$. The parameters $$ \mu $$ and $$ \sigma $$ are not observed, and we will need to construct a prior belief about their distribution. First, let's define $$ \mu $$ in terms of the other observable parameter, temperature. This relation is our **linear model**.
 
 $$
-\mu = \alpha + \beta t_i
+\mu = \alpha + \beta (t_i - \bar t )
 $$
 
-Now we have three unobserved parameters ($$ \alpha, \beta, \sigma$$), in addition to our two observable parameters ($$ x_i, t_i $$). Notice I did not include $$ \mu $$ in the list of unobserved parameters, because $$ \mu $$ is a joint distribution, completely defined by the other parameters.
+Now we have three unobserved parameters ($$ \alpha, \beta, \sigma$$), in addition to our three observable parameters ($$ x_i, t_i, \bar t $$). Notice I did not include $$ \mu $$ in the list of unobserved parameters, because $$ \mu $$ is a joint distribution, completely defined by the other parameters.
 
 ## Priors
-First we need to construct **prior distributions** for each of the unobserved parameters. This step requires some intuition, so we will think it through. The plots are generated using code which I have [uploaded to Github](https://github.com/bdjohnson529/statistics/blob/master/bike_sharing/scripts/prior-prediction.R).
+Let's construct **prior distributions** for each of the unobserved parameters. This step requires some intuition, so we will think it through. The plots are generated using code which I have [uploaded to Github](https://github.com/bdjohnson529/statistics/blob/master/bike_sharing/scripts/prior-prediction.R).
 
-A good place to start is by thinking about extreme values. Normalized temperature $$ t_i $$ ranges between 0 and 1, so let's evaluate our linear model at one of the extremes, when $$ t_i = 0 $$.
+A good place to start is by thinking about extreme values. When the observed temperature $$ t_i $$ equals the average observed temperature $$ \bar t $$, the equation for $$ \mu $$ will simplify.
 
 $$
-\mu = \alpha + \beta t_i
+\mu = \alpha + \beta (t_i - \bar t)
 \\ \mu = \alpha + \beta (0)
 \\ \mu = \alpha
 $$ 
 
-It is clear that in this case, the likelihood $$ x_i $$ is defined entirely by $$ \alpha $$. Take a look at the likelihood function to convince yourself. The bike count can never be negative, which means that a good prior would enforce $$ \alpha $$ to be positive. Let's take $$ \alpha $$ to be a log-normal distribution.
+When the observed temperature equals the average temperature, I expect the bike count to fall in the middle of the observed range. The bike counts range from 1 to 1000, so I am going to define $$ \alpha $$ as a normal distribution, centered around 400.
 
 $$
-\alpha \sim LogNormal(0,1)
+\alpha \sim Normal(400,200)
 $$
 
 <img src="{{ site.baseurl }}/assets/img/docs/bayesian/bikes/sample_a.png"
@@ -69,7 +82,7 @@ $$
      width=500px
      height="100%">
 
-Finally, we need to construct a prior for the variance of the likelihood function. Variance must be positive, so we can once again bound it at zero. Recall that our bike counts range from 1 to 1000. I will use a uniform distribution between 0 and 200 as the initial prior, due to my ignorance about the actual distribution of this parameter.
+Finally, we need to construct a prior for the variance of the likelihood function. Variance must be positive, so we can once again bound it at zero. Recall that our bike counts range from 1 to 1000. I will use a uniform distribution between 0 and 200 as the initial prior, so that the mean plus or minus 2 standard deviations covers 80% of the observed range of bike counts.
 
 $$
 \sigma \sim Uniform(0, 200)
@@ -80,34 +93,31 @@ $$
      width=500px
      height="100%">
 
-## Model
-Now that we have constructed a likelihood function, and defined all our priors, we can formulate a well-defined Bayesian model. Notice that each of our parameters is defined as a stochastic distribution - this is a feature of Bayesian analyses. The only parameter which is not defined as a distribution is $$ \mu $$, and that is because $$ \mu $$ is defined in terms of other stochastic parameters.
-
-$$
-x_i \sim Normal(\mu, \sigma)
-\\ \mu = \alpha + \beta t_i
-\\ \alpha \sim LogNormal(0,1)
-\\ \beta \sim Normal(500, 200)
-\\ \sigma \sim Uniform(0, 200)
-$$
-
 ## Prior Prediction
-Now let's sample from the likelihood function, and see how our model predicts bike counts. Since $$ x_i $$ is defined in terms of $$ t_i $$, each temperature implies a different distribution for $$ x_i $$. Let's use the mean $$ t_i $$ observed in our dataset, which is approximately 0.497.
+Now let's sample from the likelihood function, and see how our model predicts bike counts. To produce the prior prediction, I will take 100 samples from $$ \alpha $$ and $$ \beta $$, substitute the observed mean in the dataset for $$ \bar t $$, and plot each of the 100 lines which are predicted by our likelihood function. The R code to produce this plot can be [found on Github.](https://github.com/bdjohnson529/statistics/blob/master/bike_sharing/scripts/prior-prediction.R)
 
-To construct the prior prediction in R, I used the code below. Note how I substituted 0.497 for $$ t_i $$ in the equation defining `prior_x`. The plot below can be reproduced for a different value of $$ t_i $$.
-
-```r
-sample_a <- rlnorm(1e4, 0, 1)
-sample_b <- rnorm(1e4, 500, 200)
-sample_s <- runif(1e4, 0, 200)
-
-prior_x <- rnorm( 1e4 , sample_a + sample_b * 0.497 , sample_s ) 
-```
-
-<img src="{{ site.baseurl }}/assets/img/docs/bayesian/bikes/sample_x.png"
-     alt="Sample x"
+<img src="{{ site.baseurl }}/assets/img/docs/bayesian/bikes/prior_prediction.png"
+     alt="Prior prediction"
      width=500px
      height="100%">
 
+Our prior prediction does cover the range of the observed values from 1 to 1000. It could certainly be improved by eliminating the priors which predict negative values for $$ x_i $$, since negative bike counts are impossible. For now, we will accept the weaknesses of our priors and move on to the next step of our analysis.
 
+## Posterior Distribution
+I will use the quadratic approximation to find the posterior distribution. The quadratic approximation approximates the posterior as a Gaussian distribution, and finds the peak and curvature near the peak.
 
+The figure below displays several different pieces of information. The blue points represent the observed data, collected by the Capital Bikeshare System. The solid black line represents the average predicted count, at each temperature value. The shaded region represents the 89% prediction interval, calculated at each temperature value.
+
+The code which generates this plot can be [found on Github.](https://github.com/bdjohnson529/statistics/blob/master/bike_sharing/scripts/posterior-quap.R)
+
+<img src="{{ site.baseurl }}/assets/img/docs/bayesian/bikes/posterior.png"
+     alt="Posterior distribution"
+     width=500px
+     height="100%">
+
+## Model Evaluation
+Our model is entirely deficient in some ways, and useful in other ways. The first weakness of the model is its failure to describe bike counts about 600. The 89% prediction interval does not include the largest bike counts, and fails to describe a large portion of the data.
+
+The model does do a good job describing the lower bound of bike counts when it is warm outside. The 89% prediction interval excludes the bottom right of the graph, which represents low bike counts when the temperature is high. The data also does not include any values in this region, which indicates that our model accurately represents this aspect of the data we have collected. Of course, the sample we collected may not represent the world at large.
+
+By examining the data, it is apparent that a linear model may not describe the data. An exponential or higher order polynomial may do a better job describing the data. Future analyses could explore the predictions of a polynomial model in this context.
