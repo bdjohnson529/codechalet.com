@@ -32,7 +32,7 @@ function FilterTopics(filter) {
 function HomePage() {
   // default configuration on page load
 
-  var active_filters = ["analytics-button"];
+  var active_filters = [];
 
   ResetButtons();
   MakeButtonsActive(active_filters);
@@ -43,7 +43,7 @@ function HomePage() {
 
   // only hide topics if there is a filter selected
   if (active_topics.length > 0) {
-    HideInactiveTopics(active_topics);
+    // HideInactiveTopics(active_topics);
   }
 
 }

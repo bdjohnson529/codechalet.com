@@ -16,16 +16,26 @@ Fortunately, we have [some data](https://archive.ics.uci.edu/ml/datasets/bank+ma
 How can we predict the likelihood that each customer will sign up for a term deposit?
 
 # Multivariate Models
-The available customer information includes **age**, **education**, and the customer's **credit** and **default status**. Each customer was included in last year's marketing campaign, so we also have the outcome, i.e. whether the customer enrolled in a term deposit or not.
+The available customer information includes **age**, **education**, and the customer's **default status**. Each customer was included in last year's marketing campaign, so we also have the outcome, i.e. whether the customer enrolled in a term deposit or not.
 
-We will use these variables to build a multivariate linear model. Let's build a model which represents  conversion rate as a linear model defined by the parameters age, education, credit and default status.
+We will use these variables to build a multivariate linear model. Let's build a model which represents  conversion rate as a linear model defined by the parameters age, education, credit and default status. First, let's define the predictive parameters:
+
+* $$ A_i $$ - the age of customer $$ i $$
+* $$ E_i $$ - highest level of education for customer $$ i $$, which we will encode as a number
+* $$ D_i $$ - default status of customer $$ i $$ : has the customer defaulted on loans?
+
+and the outcome variable:
+
+* $$ R_i $$ - predicted conversion rate for customer $$ i $$
+
+So far, our model looks like this:
 
 $$
 R_i \sim Normal(\mu_i, \sigma)
-\\ \mu_i = \alpha + \beta_A A_i + \beta_B B_i + \beta_C C_i + \beta_D D_i
+\\ \mu_i = \alpha + \beta_A A_i + \beta_E E_i + \beta_D D_i
 $$
 
-Each of the parameters $$ \beta_A, \beta_B, \beta_C, \beta_D $$ has a prior distribution. Before defining the prior, let's center our variables.
+Before choosing the prior distribution for each of our coefficients, let's center the education variable.
 
 
 
