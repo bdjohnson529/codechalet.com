@@ -11,10 +11,10 @@ image: algorithms
 Common algorithms for learning and practicing computer science.
 
 
-## Concepts
+##### Sort Algorithms
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/concepts" %}
+  {% if page.path contains "algorithms/sort_algorithms" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}
@@ -24,7 +24,20 @@ Common algorithms for learning and practicing computer science.
 {%- endfor -%}
 </ul>
 
-## Problems
+##### Data Structures
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/data_structures" %}
+  <li>
+    <a href="{{ page.url | relative_url }}">
+      {{ page.title | escape }}
+    </a>
+  </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
+##### Practice Problems
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "algorithms/problems" %}
