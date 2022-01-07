@@ -8,7 +8,7 @@ image: algorithms
 ---
 {% assign pages = site.docs | sort: 'order' %}
 
-Common algorithms for learning and practicing computer science.
+Algorithms for learning and practicing computer science. I use [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms), by Cormen, as a reference.
 
 
 ##### Sort Algorithms
