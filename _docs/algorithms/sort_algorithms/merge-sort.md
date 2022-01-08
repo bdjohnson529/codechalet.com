@@ -12,14 +12,17 @@ def merge_sort(input_array: list) -> list:
     """Sorts the input array in ascending order.
     """
     if len(input_array) > 1:
+        # divide
         mid = len(input_array) // 2
 
         left = input_array[:mid]
         right = input_array[mid:]
 
+        # conquer
         left = merge_sort(left)
         right = merge_sort(right)
 
+        # combine
         output = merge(left, right)
 
         return output
@@ -54,7 +57,11 @@ def merge(a: list, b: list) -> list:
 ```
 
 ## Complexity
-The merge sort algorithm can be conceptually divided into three steps: dived, conquer and combine. The divide step splits the input array in half, and has a time complexity of $$ O(1) $$ since computing the middle of an array takes a constant time. The conquer step involves solving the two subproblems, and takes time $$ 2T(n/2) $$, where $$ T(n) $$ is the time it takes to solve the problem with an array of size $$ n $$. The combine step, or the merge, iterates through each element of the sorted array once and takes $$ O(n) $$.
+The merge sort algorithm can be divided into three steps: divide, conquer and combine. We will calculate the worst-case time complexity.
+
+* The divide step splits the input array into two subarrays. Finding the middle of a list takes a constant time, and copying the list into two lists also takes a constant time. The time complexity of this step is  list is $$ O(1) $$
+* The conquer step recursively calls the `merge_sort()` function on the two subarrays. Let's define $$ T(n) $$ the time it takes to make `n` recursive calls. The total time it takes to perform all recursions on both subarrays is $$ 2T(n/2) $$.
+* The combine step merges two sorted lists. Conceptually this is the same as combining two sorted piles of cards. Draw the top two cards of each pile, select the smaller card, and repeat. In the worst case, you will need to draw all the cards from both stacks. The time complexity of the merge is $$ O(n) $$.
 
 The total time complexity of the merge sort algorithm is
 
