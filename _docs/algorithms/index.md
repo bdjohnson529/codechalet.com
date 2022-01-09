@@ -11,10 +11,36 @@ image: algorithms
 Algorithms for learning and practicing computer science. I use [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms), by Cormen, as a reference.
 
 
-##### Sort Algorithms
+##### Mathematics
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/sort_algorithms" %}
+  {% if page.path contains "algorithms/mathematics" %}
+  <li>
+    <a href="{{ page.url | relative_url }}">
+      {{ page.title | escape }}
+    </a>
+  </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
+##### Sort
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/sort" %}
+  <li>
+    <a href="{{ page.url | relative_url }}">
+      {{ page.title | escape }}
+    </a>
+  </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
+##### Search
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/search" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}

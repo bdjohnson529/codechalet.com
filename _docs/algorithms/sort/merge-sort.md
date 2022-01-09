@@ -66,11 +66,11 @@ The merge sort algorithm can be divided into three steps: divide, conquer and co
 The total time complexity of the merge sort algorithm is
 
 $$
-O(1) + 2T(n/2) + O(n)
+T(n) = O(1) + 2T(n/2) + O(n)
 $$
 
 Neglecting the constant, we can simplify the time complexity
 
 $$
-2T(n/2) + O(n)
+T(n) = 2T(n/2) + O(n)
 $$
