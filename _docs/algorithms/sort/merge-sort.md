@@ -66,11 +66,17 @@ The merge sort algorithm can be divided into three steps: divide, conquer and co
 The total time complexity of the merge sort algorithm is
 
 $$
-T(n) = O(1) + 2T(n/2) + O(n)
+T(n) = \theta (1) + 2T(n/2) + \theta (n)
 $$
 
 Neglecting the constant, we can simplify the time complexity
 
 $$
-T(n) = 2T(n/2) + O(n)
+T(n) = 2T(n/2) + \theta (n)
+$$
+
+If we solve for $$ T(n) $$, we will arrive at the following upper bound.
+
+$$
+T(n) \leq \theta (n \log n)
 $$

@@ -30,8 +30,14 @@ def insertion_sort(input_arr):
 ## Complexity
 Notice that in the worst case, the input array will be sorted in reverse order. If we define the number of elements in the input array as $$ n $$, the algorithm will need to iterate through the array $$ n $$ times, and perform $$ n $$ swaps for each iteration.
 
-As a back of the napkin calculation, the algorithm will be performing approximately $$ n^2 $$ computations. The time complexity is $$ n^2 $$.
+The algorithm iterates through the array twice. The number of instructions in the worst case will be defined by
 
 $$
-O(n) = n^2
+\\ \sum_{0}^{n} n^2
+$$
+
+Neglect the constant, and we have the upper bound on the execution time of insertion sort.
+
+$$
+T(n) \leq \theta ( n^2 )
 $$

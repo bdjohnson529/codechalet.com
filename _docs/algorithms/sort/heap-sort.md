@@ -16,20 +16,27 @@ Heaps can be represented as arrays, where the position of each array element cor
 ```
 
 ## Heapify
-The first algorithm we will build, as part of heapsort, is the heapify algorithm. Heapify converts a binary tree into a heap. Inspect the binary tree below, and you will see that node 2 (26) violates the heap property, since its value is less than the values of its children. Let's build an algorithm to float 26 down so that the binary tree becomes a heap.  
+The first algorithm we will build, as part of heapsort, is the heapify algorithm. Heapify floats a node which is out of place, down the heap. The two child trees of the selected node must both be heaps, in order for heapify to work. 
+
+Inspect the binary tree below, and you will see that node 2, which has a value of 26, violates the heap property, since its value is less than the values of its children. Let's build an algorithm to float 26 down so that the binary tree becomes a heap.  
 
 <img src="{{ site.baseurl }}/assets/img/docs/algorithms/heapify.jpg" alt="Heap">
 
-The input array for our algorithm is 
+The above binary tree can be represented as an array.
 ```python
 [44, 26, 35, 42, 31, 19, 27, 10, 33, 14]
 ```
 
-The following is an implementation of the heapify algorithm, as described in [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
+The following is an implementation of the heapify algorithm, as defined in [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
 ```python
 def heapify(binary_tree: list, parent: int) -> list:
     """Sorts the input array in ascending order.
     """
+
+    ###
+    # 1 - computation
+    ###
+
     left = 2*parent + 1
     right = 2*parent + 2
 
@@ -46,25 +53,34 @@ def heapify(binary_tree: list, parent: int) -> list:
         binary_tree[parent] = binary_tree[largest]
         binary_tree[largest] = tmp
 
+    ###
+    # 2 - recursion
+    ###
         heapify(binary_tree, largest)
 
     return binary_tree
 ```
 
-We can calculate the worst case runtime by noticing that `heapify` will run recursively on one of the child trees. If the parent tree has $$ n $$ nodes, the left child tree will have at most $$ 2n/3 $$ elements. The worst case runtime, is therefore defined by the following recursion
+The `heapify` function has two steps - a computation, and a recursive call to itself. The computation has constant runtime, since accessing the length of an array and accessing an element of the array are both lookups. It can be shown that the upper bound on the recursion is $$ T(2n/3) $$. Combine the two, and we get the upper bound on the execution time of `heapify`.
 
 $$
 T(n) \leq T(2n/3) + O(1)
 $$
 
-Aside from the recursion, the computations in the heapify algorithm take constant time. The solution to the recurrrence is
+Soving for the recursion, we get
 
 $$
-T(n) = O(\log n)
+T(n) \leq O(\log n)
 $$
 
 ## Heap Build
-Heapify can be used to construct a heap from an unsorted array. In order for the heapify algorithm to work, the child trees both need to be heaps. So, we need to apply heapify in a bottom up manner so that the child trees are guaranteed to be heaps before heapify is run at a node. Each element of the binary tree in the set $$ A[n/2+1, n/2+2, ... n] $$ has no children, so these nodes are one-element heaps. We need to call heapify on each element set $$ A[1, 2, ... n/2] $$ in order to arrange the rest of the binary array as a heap.
+Heapify can be used to construct a heap from an unsorted array. In order for the heapify algorithm to work, the child trees both need to be heaps. So, we need to apply heapify in a bottom up manner so that the child trees are guaranteed to be heaps before heapify is run at a node.
+
+The last element of a binary tree with children, has $$ n/2 $$ cardinality. We don't need to run the algorithm on the set of nodes with no children, since these nodes are already one-element heaps. So, we only need to call `heapify` in reverse order, on the set of elements with children.
+
+$$
+A[1, 2, ... n/2]
+$$
 
 ```python
 def build_heap(input_array: list) -> list:
@@ -81,24 +97,31 @@ def build_heap(input_array: list) -> list:
     return input_array
 ```
 
-Previously, we found that heapify has a worst-case execution time of $$ O(\log n) $$. The heap build algorithm will make $$ n/2 $$ calls to heapify, so the time complexity of heap build is
+Starting with the $$ A[n/2] $$ element, we will call heapify $$ n/2 $$ times. Therefore, the upper bound on the execution time of heap build is the product of $$ n/2 $$ and the execution time of `heapify`.
 
 $$
-T(n) = O(\frac{n}{2} \log n)
+T(n) \leq O(\frac{n}{2} \log n)
 $$
 
-A tighter bound can be constructed on heap build, and it can be shown that the worst case execution time of heap build is
+In most contexts we can neglect the constant factor and simplify.
 
 $$
-T(n) = O(n)
+T(n) \leq O(n \log n)
 $$
+
+Using some clever math, we can further simplify the upper bound.
+
+$$
+T(n) \leq O(n)
+$$
+
 
 ## Heap Sort
 Heaps can be used to generate sorted arrays. After all, we are still building a sorting algorithm! In a heap, the maximum element will be stored at the root node. The first element of the heap will become the last element of the sorted array, if the array is sorted in ascending order.
 
-If we remove the first element of the heap, we need to replace it with another element. What if we replaced it with the last element of the heap, so that we swapped the first and last elements of the heap? The root node of the heap would violate the heap property, but both of the child trees would still be heaps. Therefore, we only need to call heapify to restore the heap!
+If we remove the first element of the heap, we need to replace it with another element. What if we replaced it with the last element of the heap, so that we swapped the first and last elements of the heap? The root node of the heap would violate the heap property, but all other nodes would be heap-like. Therefore, we only need to call heapify to float the out-of-place element down the heap!
 
-In this manner we can reduce the size of the heap by removing the first element, call heapify to restore the heap, and rinse and repeat. Notice that this algorithm sorts in place - the values it stores in memory do not depend on the size of the heap. 
+In this manner we can reduce the size of the heap by replacing the first element, reducing the size of the heap, and calling heapify to restore the heap. Ater $$ (n-1) $$ iterations, we will reduce the size of the heap to 0.
 
 ```python
 def heap_sort(input_array: list) -> list:
@@ -120,8 +143,8 @@ def heap_sort(input_array: list) -> list:
     return heap
 ```
 
-The call to `build_heap` takes $$ O(n) $$ time, and each call to `heapify` takes $$ O(lg n) $$ time. We will be making $$ (n - 1) $$ calls to `heapify`, so the time complexity of `heap_sort` is as follows
+Notice that this algorithm sorts in place - the data structure which is created, `tmp` in the code below, is of constant size. The call to `build_heap` makes one call to `build_heap`, and $$ n - 1 $$ calls to `heapify`. The upper bound on `heap_sort` can be shown to be
 
 $$
-T(n) = O(n \log n)
+T(n) \leq O(n \log n)
 $$
