@@ -9,10 +9,24 @@ Heap sort uses the heap data structure to sort an array. A *heap* is a complete 
 
 <img src="{{ site.baseurl }}/assets/img/docs/algorithms/heap.jpg" alt="Heap">
 
-Heaps can be represented as arrays, where the position of each array element corresponds to its position in the binary tree. The array representation of the heap pictured above would be as follows:
+Heaps can be represented as arrays, where the position of each array element corresponds to its position in the binary tree. Tree nodes are labeled from top to bottom, and left to right. For example, the third element of the heap pictured above is 35.
+
+We can represent a heap in Python as a list. Because the heap is a binary tree, the position of the parent node is related to the position of its children. The children nodes of any parent can be found using the index of the parent. If the parent has index $$ i $$, the left and right children can be found at indices $$ 2i + 1 $$ and $$ 2i + 2 $$.
+
+Convince yourself of this using the code below.
 
 ```python
-[44, 42, 35, 33, 31, 19, 27, 10, 26, 14]
+A = [44, 42, 35, 33, 31, 19, 27, 10, 26, 14]
+
+parent = 2
+left = 2*parent + 1
+right = 2*parent + 2
+
+"""
+A[parent] = 35
+A[left] = 19
+A[right] = 27
+"""
 ```
 
 ## Heapify
@@ -22,17 +36,16 @@ Inspect the binary tree below, and you will see that node 2, which has a value o
 
 <img src="{{ site.baseurl }}/assets/img/docs/algorithms/heapify.jpg" alt="Heap">
 
-The above binary tree can be represented as an array.
+Remember the above binary tree can be represented as an array.
 ```python
-[44, 26, 35, 42, 31, 19, 27, 10, 33, 14]
+A = [44, 26, 35, 42, 31, 19, 27, 10, 33, 14]
 ```
+
+Heapify will move an out-of-place node down the tree by comparing it to its children. If the selection is greater than the children, heapify will exchange the selection with the child. The algorithm iterates down the tree using a recursive call onto itself.
 
 The following is an implementation of the heapify algorithm, as defined in [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
 ```python
 def heapify(binary_tree: list, parent: int) -> list:
-    """Sorts the input array in ascending order.
-    """
-
     ###
     # 1 - computation
     ###
