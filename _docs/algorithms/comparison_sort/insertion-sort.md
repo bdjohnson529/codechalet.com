@@ -1,7 +1,7 @@
 ---
 title: "Insertion Sort"
 layout: blog
-order: 0
+order: 1
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---

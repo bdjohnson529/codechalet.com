@@ -1,7 +1,7 @@
 ---
 title: "Heap Sort"
 layout: blog
-order: 2
+order: 3
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---

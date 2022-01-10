@@ -24,10 +24,10 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
 {%- endfor -%}
 </ul>
 
-##### Sort
+##### Comparison Sorts
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/sort" %}
+  {% if page.path contains "algorithms/comparison_sort" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}

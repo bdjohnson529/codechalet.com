@@ -1,7 +1,7 @@
 ---
 title: "Quick Sort"
 layout: blog
-order: 3
+order: 4
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
