@@ -37,6 +37,19 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
 {%- endfor -%}
 </ul>
 
+##### Linear Sorts
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/linear_sort" %}
+  <li>
+    <a href="{{ page.url | relative_url }}">
+      {{ page.title | escape }}
+    </a>
+  </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
 ##### Search
 <ul>
 {%- for page in pages -%}
