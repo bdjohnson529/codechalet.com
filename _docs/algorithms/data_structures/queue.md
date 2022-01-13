@@ -20,7 +20,7 @@ class Node:
     self.prev = None
 ```
 
-Now we can implement a queue with the two operations we specified above.
+Now we can implement a queue with the two operations we specified above. Notice that the two methods of the `Queue` class, `enqueue` and `dequeue`, each have a runtime of $$ O(n) $$. The methods are performing a constant amount of work which does not depend on the length of the queue.
 
 ```python
 class Queue:
@@ -55,4 +55,19 @@ class Queue:
       self.head.next.prev = None
       self.head = self.head.next
       print(tmp.value)
+```
+
+The final method we will build is the `search` method. The search we will implement is a simple iterative search, where we iterate over every element of the linked list. This search has a runtime of $$ O(n) $$, since it iterates over all the elements of the array.
+
+```python
+  def search(self, query):
+    x = self.head
+
+    while(x != None) and (x.value != query):
+      x = x.next
+
+    if(x != None):
+      print(x.value)
+    else:
+      print("Not found")
 ```
