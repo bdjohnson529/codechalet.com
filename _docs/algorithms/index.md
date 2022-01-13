@@ -24,36 +24,10 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
 {%- endfor -%}
 </ul>
 
-##### Comparison Sorts
+##### Sort and Search
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/comparison_sort" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-##### Linear Sorts
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "algorithms/linear_sort" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-##### Search
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "algorithms/search" %}
+  {% if page.path contains "algorithms/sorting" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}

@@ -1,7 +1,7 @@
 ---
 title: "Binary Search"
 layout: blog
-order: 2
+order: 6
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
