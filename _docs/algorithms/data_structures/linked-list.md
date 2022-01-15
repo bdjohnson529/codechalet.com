@@ -1,10 +1,12 @@
 ---
-title: "Queues"
+title: "Linked Lists"
 layout: blog
 order: 0
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
+A dynamic set is a set whose elements are subject to change. Dynamic sets are ubiquitous in programming - each time you append elements to an array, you are adding elements to a dynamic set. In fact, the `array` object in Python is a dynamic array which automatically resizes itself in memory as new elements are added.
+
 A queue is a dynamic set which implements a first-in, first-out policy. A queue data structure is very similar to a queue at the supermarket - the first person to enter the queue, leaves the queue. Queues supports several operations:
 
 * enqueue : insert
