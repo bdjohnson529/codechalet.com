@@ -5,9 +5,9 @@ order: 1
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
-A hash table reduces the search time in a dynamic set to $$ O(1) $$. Recall that in an unsorted linked list, the worst case search time is $$ O(n) $$ as the search will need to iterate through each element in the linked list. The hash table reduces the average search time by using *hashing function*.
+A hash table reduces the search time in a dynamic set to $$ O(1) $$. Recall that in an unsorted linked list, the worst case search time is $$ O(n) $$ as the search will need to iterate through each element in the linked list. The hash table reduces the average search time by using a *hashing function*.
 
-A *hashing function* maps a set of elements onto a smaller set of elements. For example, consider the the modulus operator. The operation $$ n \bmod m $$ will reduce a set of size $$ n $$ into a set of size $$ m $$. To prove this to yourself, consider that taking the modulus of any number and 10 will yield 10 distinct values.
+The hashing function maps a set of elements onto a smaller set of elements. For example, consider the the modulus operator. The operation $$ n \bmod m $$ will reduce a set of size $$ n $$ into a set of size $$ m $$. To prove this to yourself, consider that taking the modulus of any number and 10 will yield 10 distinct values.
 
 The hash table stores a set of keys in a smaller set of slots, using the *hashing function* to map keys to slots. Since the hash table stores more elements than it has slots, the slots of the table must be capable of storing more than one element.
 
