@@ -1,7 +1,7 @@
 ---
-title: "Chapter 1"
+title: "Chapter 2"
 layout: blog
-order: 0
+order: 1
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
@@ -12,10 +12,10 @@ When evaluating time complexity, keep in mind the time complexity of the followi
 * sorting an array - $$ O(n \ log \ n) $$
 * iterating through an array -  $$ O(n) $$
 
-#### Strings and arrays
+#### Linked Lists
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "problems/solutions/1_" %}
+  {% if page.path contains "problems/solutions/2_" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}

@@ -55,7 +55,7 @@ Problems are taken from [Cracking the Coding Interview.](https://www.amazon.com/
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "algorithms/problems" %}
-    {% unless page.path contains "algorithms/problems/solutions_1" or page.path contains "algorithms/problems/archive" %}
+    {% unless page.path contains "algorithms/problems/solutions" or page.path contains "algorithms/problems/archive" %}
       <li>
         <a href="{{ page.url | relative_url }}">
           {{ page.title | escape }}
