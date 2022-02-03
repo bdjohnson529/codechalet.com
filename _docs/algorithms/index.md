@@ -50,15 +50,18 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
 {%- endfor -%}
 </ul>
 
-##### Practice Problems
+# Problems
+Problems are taken from [Cracking the Coding Interview.](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "algorithms/problems" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
+    {% unless page.path contains "algorithms/problems/solutions_1" or page.path contains "algorithms/problems/archive" %}
+      <li>
+        <a href="{{ page.url | relative_url }}">
+          {{ page.title | escape }}
+        </a>
+      </li>
+    {% endunless %}
   {% endif %}
 {%- endfor -%}
 </ul>

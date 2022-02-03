@@ -1,7 +1,7 @@
 ---
 title: "House robber"
 layout: blog
-order: 0
+order: 3
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Decode string"
 layout: blog
-order: 0
+order: 2
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
