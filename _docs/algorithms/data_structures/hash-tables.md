@@ -1,7 +1,7 @@
 ---
 title: "Hash Tables"
 layout: blog
-order: 1
+order: 0
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---

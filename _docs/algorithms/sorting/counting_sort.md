@@ -1,7 +1,7 @@
 ---
 title: "Counting Sort"
 layout: blog
-order: 0
+order: 5
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---

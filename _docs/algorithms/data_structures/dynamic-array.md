@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Arrays"
 layout: blog
-order: 2
+order: 1
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
