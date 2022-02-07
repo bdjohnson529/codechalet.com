@@ -23,7 +23,7 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
 {%- endfor -%}
 </ul>
 
-##### Tree Traversals
+##### Trees and Graphs
 <ul>
 {%- for page in pages -%}
   {% if page.path contains "algorithms/traversals" %}

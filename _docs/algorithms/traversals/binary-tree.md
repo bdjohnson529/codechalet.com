@@ -1,7 +1,7 @@
 ---
 title: "Binary Search Trees"
 layout: blog
-order: 4
+order: 0
 topic: Algorithms
 topic_path: /docs/algorithms/index.html
 ---
