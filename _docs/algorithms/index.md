@@ -10,11 +10,23 @@ image: algorithms
 
 Algorithms for learning and practicing computer science. I use [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms), by Cormen, as a reference.
 
-
-##### Mathematics
+##### Data Structures
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/mathematics" %}
+  {% if page.path contains "algorithms/data_structures" %}
+  <li>
+    <a href="{{ page.url | relative_url }}">
+      {{ page.title | escape }}
+    </a>
+  </li>
+  {% endif %}
+{%- endfor -%}
+</ul>
+
+##### Tree Traversals
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/traversals" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}
@@ -37,10 +49,10 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
 {%- endfor -%}
 </ul>
 
-##### Data Structures
+##### Recursion
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/data_structures" %}
+  {% if page.path contains "algorithms/recursion" %}
   <li>
     <a href="{{ page.url | relative_url }}">
       {{ page.title | escape }}
@@ -49,6 +61,7 @@ Algorithms for learning and practicing computer science. I use [Introduction to 
   {% endif %}
 {%- endfor -%}
 </ul>
+
 
 # Problems
 Problems are taken from [Cracking the Coding Interview.](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)

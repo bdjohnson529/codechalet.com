@@ -1,5 +1,5 @@
 ---
-title: "Recurrences"
+title: "Inductive Solutions"
 layout: blog
 order: 1
 topic: Algorithms
