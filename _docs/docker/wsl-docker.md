@@ -1,6 +1,7 @@
 ---
 title: "Docker on WSL"
 layout: blog
+order: 3
 topic: Docker
 topic_path: /docs/docker/index.html
 ---

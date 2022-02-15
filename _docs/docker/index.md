@@ -12,7 +12,7 @@ Docker generates an image of our app, making it easier to deploy. Tested with Do
 
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "docker" %}
+  {% if page.path contains "docs/docker" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">
