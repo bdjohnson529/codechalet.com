@@ -2,8 +2,8 @@
 title: "Inductive Solutions"
 layout: blog
 order: 1
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Recursion
+topic_path: /docs/algorithms/recursion/index.html
 ---
 Using inductive reasoning, we can calculate the bound on the time complexity of recurrences. For example, let's consider the recurrence of the [merge sort algorithm](/docs/algorithms/sorting/merge-sort.html). The worst case running time of merge sort $$ T(n) $$ is defined as follows.
 
