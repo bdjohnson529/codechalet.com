@@ -2,8 +2,8 @@
 title: "Binary Search"
 layout: blog
 order: 6
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 A binary search takes a sorted array, and searches by dividing the array in half. For example, take the sorted array
 ```

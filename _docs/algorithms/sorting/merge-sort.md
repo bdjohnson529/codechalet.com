@@ -2,8 +2,8 @@
 title: "Merge Sort"
 layout: blog
 order: 2
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 Merge sort solves the sorting problem through recursion. The algorithm recursively splits the unsorted array into two halves, until the array has a length of one. The sorted halves are recombined by iterating through both arrays, and selecting the smaller value from each array until both halves have been combined.
 

@@ -2,8 +2,8 @@
 title: "Insertion Sort"
 layout: blog
 order: 1
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 Insertion sort iterates through the input array, and inserts each member of the input array into the proper position in the output array.
 

@@ -2,8 +2,8 @@
 title: "Counting Sort"
 layout: blog
 order: 5
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 Sorting algorithms take an unsorted sequence as an input, and generate a sorted sequence as an output. Counting sort works by counting the occurences of each value in the input sequence, and calculating the number of elements which are less than a given element $$ x $$. If there are 5 elements smaller than $$ x $$, then $$ x $$ belongs in the sixth position in the sorted sequence.
 

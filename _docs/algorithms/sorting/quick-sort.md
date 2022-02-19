@@ -2,8 +2,8 @@
 title: "Quick Sort"
 layout: blog
 order: 4
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 Quick sort uses recursion to break the unsorted array into smaller subarrays, each of which is sorted before recombining the sorted subarrays into a complete sorted array. This approach to problem solving is described as the divide-and-conquer paradigm in [CLRS](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
 

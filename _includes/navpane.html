@@ -1,6 +1,6 @@
 <div class="navpane">
   <ul class="nav nav-tabs">
-    {% if include.section_path contains "index.md" %}
+    {% if include.link == "landing" %}
       <li class="nav-item">
         <a class="nav-link active" href="{{ include.topic_path }}">{{ include.topic }}</a>
       </li>
@@ -10,7 +10,7 @@
       </li>
     {% endif %}
 
-    {% unless include.section_path contains "index.md" %}
+    {% unless include.link contains "landing" %}
       <li class="nav-item">
         <a class="nav-link active" href="#">{{ include.section }}</a>
       </li>

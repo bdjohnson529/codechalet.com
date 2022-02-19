@@ -2,8 +2,8 @@
 title: "Heap Sort"
 layout: blog
 order: 3
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 Heap sort uses the heap data structure to sort an array. A *heap* is a complete binary tree, where each node is less than or equal to its parent. The binary tree below is a heap, because each parent node is greater than or equal to both of its child nodes.
 

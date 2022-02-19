@@ -8,67 +8,13 @@ image: algorithms
 ---
 {% assign pages = site.docs | sort: 'order' %}
 
-Algorithms for learning and practicing computer science. I use [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms), by Cormen, as a reference.
+I use [Introduction to Algorithms](https://en.wikipedia.org/wiki/Introduction_to_Algorithms), and [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) as references.
 
-##### Data Structures
+
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "algorithms/data_structures" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-##### Trees and Graphs
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "algorithms/traversals" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-##### Sort and Search
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "algorithms/sorting" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-##### Recursion
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "algorithms/recursion" %}
-  <li>
-    <a href="{{ page.url | relative_url }}">
-      {{ page.title | escape }}
-    </a>
-  </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
-
-# Problems
-Problems are taken from [Cracking the Coding Interview.](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "algorithms/problems" %}
-    {% unless page.path contains "algorithms/problems/solutions" or page.path contains "algorithms/problems/archive" %}
+  {% if page.path contains "algorithms/" and page.path contains "index.md" %}
+    {% unless page.path contains "algorithms/index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">
           {{ page.title | escape }}

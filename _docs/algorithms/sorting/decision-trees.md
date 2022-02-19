@@ -2,8 +2,8 @@
 title: "Decision Trees"
 layout: blog
 order: 0
-topic: Algorithms
-topic_path: /docs/algorithms/index.html
+topic: Sort
+topic_path: /docs/algorithms/sorting/index.html
 ---
 Insertion sort, merge sort, heap sort and quick sort are all examples of comparison sorts. They sort the elements of a set by making comparisons between elements. The sequence of operations in a comparison sort can be represented as a decision tree, where each node of the tree represents a comparison. The tree below describes a sorting algorithm operating on a set of 3 numbers. Since a set with 3 elements has 6 permutations, there will be 6 leaves on the decision tree.
 
