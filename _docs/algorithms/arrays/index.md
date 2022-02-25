@@ -14,6 +14,21 @@ When evaluating time complexity, keep in mind the time complexity of the followi
 * sorting an array - $$ O(n \ log \ n) $$
 * iterating through an array -  $$ O(n) $$
 
+### Topics
+<ul>
+{%- for page in pages -%}
+  {% if page.path contains "algorithms/arrays/" %}
+    {% unless page.path contains "algorithms/arrays/index.md" or page.path contains "arrays/problems" %}
+      <li>
+        <a href="{{ page.url | relative_url }}">
+          {{ page.title | escape }}
+        </a>
+      </li>
+    {% endunless" %}
+  {% endif %}
+{%- endfor -%}
+</ul>
+
 #### CCI - Chapter 1
 Problems are taken from [Cracking the Coding Interview.](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)
 
