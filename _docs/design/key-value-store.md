@@ -5,7 +5,7 @@ order: 2
 topic: System Design
 topic_path: /docs/design/index.html
 ---
-Database are generally divided into two categories : relational databases, and non-relational databases. Relational databases were invented in 1970 to model financial transactions [1]. A relational database (RDB) organizes data into rows identified by primary keys. Tables can reference records in other tables, using their primary keys. A primary key embedded in a foreign table is called a foreign key.
+Databases are generally divided into two categories : relational databases, and non-relational databases. Relational databases were invented in 1970 to model financial transactions [1]. A relational database (RDB) organizes data into rows identified by primary keys. Tables can reference records in other tables, using their primary keys. A primary key embedded in a foreign table is called a foreign key.
 
 RDBs can model complex systems in the real world, including business transactions, analytics and scientific experiments. One of the advantages of RDBs is the ease of joining records in one table with records in another. Consider the data model represented by the diagram below - the `Users` table can be compressed by storing the name of the country and continent in a different table.
 
