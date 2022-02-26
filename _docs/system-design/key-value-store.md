@@ -3,7 +3,7 @@ title: "Key Value Stores"
 layout: blog
 order: 2
 topic: System Design
-topic_path: /docs/design/index.html
+topic_path: /docs/system-design/index.html
 ---
 Databases are generally divided into two categories : relational databases, and non-relational databases. Relational databases were invented in 1970 to model financial transactions [1]. A relational database (RDB) organizes data into rows identified by primary keys. Tables can reference records in other tables, using their primary keys. A primary key embedded in a foreign table is called a foreign key.
 

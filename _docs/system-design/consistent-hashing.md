@@ -3,7 +3,7 @@ title: "Consistent Hashing"
 layout: blog
 order: 1
 topic: System Design
-topic_path: /docs/design/index.html
+topic_path: /docs/system-design/index.html
 ---
 *Notes from [System Design Interview.](https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF/ref=sr_1_1?keywords=system+design+interview&qid=1645591606&sprefix=system+desi%2Caps%2C166&sr=8-1)*
 
