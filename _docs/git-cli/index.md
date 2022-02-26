@@ -3,7 +3,7 @@ title: "Git CLI"
 layout: blog
 link: "landing"
 topic: Git CLI
-topic_path: /docs/gitcli/index.html
+topic_path: /docs/git-cli/index.html
 image: git
 ---
 {% assign pages = site.docs | sort: 'order' %}
@@ -16,7 +16,7 @@ Git is version control software which manages changes to files. These resources 
 # Workflows
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "gitcli/workflow" %}
+  {% if page.path contains "git-cli/workflow" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">

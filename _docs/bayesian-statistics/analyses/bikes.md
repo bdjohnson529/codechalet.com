@@ -3,7 +3,7 @@ layout: blog
 title: Bicycles and Cold Weather
 order: 1
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 Are people less likely to ride bicycles during a stint of cold weather? This analysis sets out to answer that question, using a data from the [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) system in Washington DC. The operators of the Capital Bikeshare system have published their system data for research, and we are going to use a small sample of that data collected during 2011 and 2012. The dataset is available on the [UCI website](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset).
 

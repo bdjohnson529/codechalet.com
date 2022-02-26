@@ -3,7 +3,7 @@ layout: blog
 title: Binomial Distribution
 order: 0
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 The binomial distribution measures the number of successes in an experiment which has two possible outcomes. Flipping a coin is a binomial experiment - the experiment can produce one of two values, H or T. We can define the two outcomes as *success* and *failure*, depending on the context. Mathematically, the probability of `X` successes, given a likelihood `p` and number of experiments `x` can be expressed like so:
 

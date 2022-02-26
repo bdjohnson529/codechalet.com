@@ -3,7 +3,7 @@ title: "Commits"
 layout: blog
 order: 0
 topic: Git CLI
-topic_path: /docs/gitcli/index.html
+topic_path: /docs/git-cli/index.html
 ---
 
 Initialize a local repo

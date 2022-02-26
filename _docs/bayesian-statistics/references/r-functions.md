@@ -3,7 +3,7 @@ layout: blog
 title: R Functions
 order: 0
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 Custom R functions.
 

@@ -3,7 +3,7 @@ layout: blog
 title: Weighted Coin Flip
 order: 0
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 Let's do a simple Bayesian analysis of a weighted coin flip. For the purposes of the experiment, suppose you are having dinner with your friends, and one of your friends brings a coin. Your friend suggests a game - she will flip a coin 100 times, and the person who predicts the number of heads most accurately wins.
 

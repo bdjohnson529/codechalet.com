@@ -3,7 +3,7 @@ layout: blog
 title: Normal Distribution
 order: 0
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 The normal distribution is capable of representing many different process models. Any measurement with noise will tend towards a normal distribution, because of the cumulative effects of the fluccuations. For example, if you are trying to measure the postition of the stars in the sky, you will tend to have fewer measurements with extreme errors, and more measurements with errors of smaller magnitude.
 

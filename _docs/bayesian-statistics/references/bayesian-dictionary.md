@@ -3,7 +3,7 @@ layout: blog
 title: Bayesian Dictionary
 order: 0
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 This is a dictionary of terms used in Bayesian statistics.
 

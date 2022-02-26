@@ -3,7 +3,7 @@ layout: blog
 title: Participation Likelihood
 order: 2
 topic: Bayesian Statistics
-topic_path: /docs/bayesian/index.html
+topic_path: /docs/bayesian-statistics/index.html
 ---
 How can Bayes' theorem be applied to solve business problems? One application is deciding which customers to target for a business outcome. Marketing managers constantly make decisions about which customers to target. Consider this scenario.
 

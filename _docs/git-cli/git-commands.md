@@ -2,7 +2,7 @@
 title: "Git Commands"
 layout: blog
 topic: Git CLI
-topic_path: /docs/gitcli/index.html
+topic_path: /docs/git-cli/index.html
 ---
 
 Test Git installation
