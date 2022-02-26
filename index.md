@@ -6,9 +6,11 @@ This site is a library for different software engineering topics. To start, clic
 
 <br>
 
-<img src="{{ site.baseurl }}/assets/img/mountain.jpg" alt="Ski Mountain">
 
-{% for category in site.data.settings %}
+<div class="row">
+  <div class="col">
+
+  {% for category in site.data.settings %}
   <h3>{{ category[0] }}</h3>
 
   <ul>
@@ -22,8 +24,19 @@ This site is a library for different software engineering topics. To start, clic
     {% endfor %}
   </ul>
 
-{% endfor %}
+  {% endfor %}
+
+  </div>
+
+  <div class="col">
+    <img src="{{ site.baseurl }}/assets/img/tree.jpg" alt="Ski Mountain">
+  </div>
+</div>
 
 
 <br><br>
-<p><a href="https://www.freepik.com/vectors/mountain-sketch">Mountain sketch by Harryarts.</a></p>
+<p>
+  <a href='https://www.freepik.com/vectors/plant-silhouette' target="_blank">
+    Sketch from rawpixel.com.
+  </a>
+</p>
