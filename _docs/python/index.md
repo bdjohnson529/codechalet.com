@@ -14,7 +14,7 @@ These are some notes from learning and teaching Python.
 ### Data Structures
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "python/paradigms" %}
+  {% if page.path contains "python/data-structures" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">
@@ -26,10 +26,10 @@ These are some notes from learning and teaching Python.
 {%- endfor -%}
 </ul>
 
-### Testing
+### In Production
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "python/tests" %}
+  {% if page.path contains "python/tools" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">
