@@ -2,10 +2,11 @@
 layout: home
 ---
 # Welcome to Code Chalet!
-This site contains resources about different technical topics. To start, click a topic which interests you.
+This site is a library for different software engineering topics. To start, click a topic which interests you.
 
 <br>
 
+<img src="{{ site.baseurl }}/assets/img/mountain.jpg" alt="Ski Mountain">
 
 {% for category in site.data.settings %}
   <h3>{{ category[0] }}</h3>
@@ -22,3 +23,7 @@ This site contains resources about different technical topics. To start, click a
   </ul>
 
 {% endfor %}
+
+
+<br><br>
+<p><a href="https://www.freepik.com/vectors/mountain-sketch">Mountain sketch by Harryarts.</a></p>
