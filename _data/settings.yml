@@ -1,21 +1,23 @@
-analytics:
+Analytics and Data Science:
   - Analytics
   - Bayesian Statistics
 
-serverless:
-  - AWS
-
-development:
-  - Git CLI
-  - Windows
-
-webapplications:
+Backend Development:
   - Ruby on Rails
   - Flask
   - Databases
 
-languages:
+Coding Interview Study Guide:
+  - Algorithms
+  - System Design
+
+Infrastructure:
+  - AWS
+  - Git CLI
+  - Windows
+
+Programming Languages:
+  - Haskell
+  - Javascript
   - Python
   - Ruby
-  - Javascript
-  - Haskell
