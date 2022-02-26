@@ -17,7 +17,7 @@ This site is a library for different software engineering topics. To start, clic
     {% for topic in category[1] %}
     {% assign path = topic | downcase | replace: " ", "-" %}
     <li>
-        <a href="{{ site.baseurl }}/docs/{{ topic | downcase | replace: ' ', '-'' }}">
+        <a href="{{ site.baseurl }}/docs/{{ topic | downcase | replace: ' ', '-'' }}/index.html">
           {{ topic }}
         </a>
     </li>
