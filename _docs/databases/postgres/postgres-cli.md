@@ -18,9 +18,25 @@ psql -U postgres
 
 Show all tables
 ```bash
-user-# \dt
+\dt
 ```
+
+Show all schemas
+```bash
+\dn
+```
+
+Create schema
+```bash
+CREATE SCHEMA myschema;
+```
+
+Change schema
+```bash
+SET search_path TO myschema;
+```
+
 Quit CLI
 ```bash
-user-# \q
+\q
 ```
