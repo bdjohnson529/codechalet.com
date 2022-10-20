@@ -15,6 +15,7 @@ Infrastructure:
   - AWS
   - Docker
   - Git CLI
+  - Kubernetes
   - Terraform
   - Windows
 
