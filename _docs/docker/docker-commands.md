@@ -16,6 +16,11 @@ View all containers
 docker ps
 ```
 
+Exec into container
+```
+docker exec -it <container> bash
+```
+
 View all active containers
 ```bash
 docker ps -a
