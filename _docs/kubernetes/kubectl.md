@@ -49,3 +49,18 @@ Check Kubernetes version
 ```
 kubectl version
 ```
+
+Get namespaces
+```
+kubectl get namespace
+```
+
+Change namespace
+```
+kubectl config set-context --current --namespace=<insert-namespace-name-here>
+```
+
+View current namespace
+```
+kubectl config view --minify | grep namespace:
+```
