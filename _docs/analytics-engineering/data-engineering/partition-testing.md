@@ -2,8 +2,8 @@
 layout: blog
 title: Partition Testing
 order: 2
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 All software teams face the common challenge of adding code to a source code base without breaking the code which already exists. Software engineers have traditionally solved this problem by executing unit tests which are run before new code is deployed to production. The unit tests verify that each "unit" of code executes properly.
 

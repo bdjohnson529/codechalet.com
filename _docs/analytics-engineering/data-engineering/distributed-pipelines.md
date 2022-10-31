@@ -2,8 +2,8 @@
 layout: blog
 title: Spark Pipelines
 order: 3
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 There are many cases when we we need to perform a computation, or some sort of processing, on a large dataset. Consider, for example, a dataset with one million rows (a modest size in the context of big data). Let's say we have a computation which takes 1 second to perform. If we run the calculation on a single processor, the calculation will take 277 hours to complete.
 

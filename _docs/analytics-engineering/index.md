@@ -2,8 +2,8 @@
 title: "Analytics"
 layout: blog
 link: "landing"
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 image: analytics
 ---
 {% assign pages = site.docs | sort: 'order' %}
@@ -13,7 +13,7 @@ Notes from building analytics platforms.
 ### Data Engineering
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "analytics/data-engineering" %}
+  {% if page.path contains "analytics-engineering/data-engineering" %}
     <li>
       <a href="{{ page.url | relative_url }}">
         {{ page.title | escape }}
@@ -26,7 +26,7 @@ Notes from building analytics platforms.
 ### Databricks
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "analytics/databricks" %}
+  {% if page.path contains "analytics-engineering/databricks" %}
     <li>
       <a href="{{ page.url | relative_url }}">
         {{ page.title | escape }}
@@ -39,7 +39,7 @@ Notes from building analytics platforms.
 ### Airflow
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "analytics/airflow" %}
+  {% if page.path contains "analytics-engineering/airflow" %}
     <li>
       <a href="{{ page.url | relative_url }}">
         {{ page.title | escape }}

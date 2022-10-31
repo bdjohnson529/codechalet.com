@@ -2,8 +2,8 @@
 layout: blog
 title: Pandas and PySpark Dataframes
 order: 3
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 One important concept to understand when writing Spark programs in Python is the distinction between Pandas dataframes, and PySpark dataframes. Both have similar syntax, which can lead to confusion when a dataframe is missing an expected method. The easiest way to determine the object type is using the native [type function](https://www.geeksforgeeks.org/python-type-function/). For more information on each object type, please see the module documentation:
 

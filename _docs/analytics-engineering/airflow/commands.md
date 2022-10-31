@@ -2,8 +2,8 @@
 layout: blog
 title: Commands
 order: 4
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 Notes from using Airflow on Mac OS, with Python 3.9.7.
 

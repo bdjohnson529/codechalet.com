@@ -2,8 +2,8 @@
 layout: blog
 title: Production Architecture
 order: 0
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 If you use Databricks to execute your Spark jobs, you may wonder how to put these jobs into production. Databricks provides a nice UI for creating and editing notebooks, but what if you want to refactor these notebooks into production batch processing jobs? This article will explain how to do exactly that.
 

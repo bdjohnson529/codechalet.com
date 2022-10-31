@@ -11,21 +11,6 @@ image: kubernetes
 Kubernetes uses manifests to orchestrate pods.
 
 
-## CKAD Notes
-Notes from studying for Certified Kubernetes Application Developer exam. I used [this Udemy course](https://www.udemy.com/course/certified-kubernetes-application-developer).
-
-<ul>
-{%- for page in pages -%}
-  {% if page.path contains "kubernetes/ckad" %}
-    <li>
-      <a href="{{ page.url | relative_url }}">
-        {{ page.title | escape }}
-      </a>
-    </li>
-  {% endif %}
-{%- endfor -%}
-</ul>
-
 ## Commands
 
 <ul>

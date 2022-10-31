@@ -2,8 +2,8 @@
 layout: blog
 title: Structuring Jobs
 order: 1
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 This style guide introduces a framework for structuring production batch data processing jobs. I tried to keep the framework general so it would remain relevant for different programming languages.
 

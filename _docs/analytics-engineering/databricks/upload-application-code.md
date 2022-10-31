@@ -2,8 +2,8 @@
 layout: blog
 title: Uploading Application Code
 order: 2
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 This is a design document, explaining how to upload application code to Spark nodes, via Databricks Connect.
 

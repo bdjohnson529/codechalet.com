@@ -2,8 +2,8 @@
 layout: blog
 title: Databricks Connect
 order: 1
-topic: Analytics
-topic_path: /docs/analytics/index.html
+topic: Analytics Engineering
+topic_path: /docs/analytics-engineering/index.html
 ---
 
 

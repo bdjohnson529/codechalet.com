@@ -1,17 +1,18 @@
-Analytics and Data Science:
-  - Analytics
+Analytics:
+  - Analytics Engineering
   - Bayesian Statistics
 
-Backend Development:
+Backend:
   - Databases
   - Flask  
   - Ruby on Rails
 
-Coding Interview Study Guide:
+Coding Interview:
   - Algorithms
   - System Design
 
-Infrastructure:
+DevOps:
+  - Terminal
   - AWS
   - Docker
   - Git CLI
@@ -19,7 +20,7 @@ Infrastructure:
   - Terraform
   - Windows
 
-Programming Languages:
+Languages:
   - Haskell
   - Javascript
   - Python
