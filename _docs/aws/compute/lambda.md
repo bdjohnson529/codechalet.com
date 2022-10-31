@@ -1,13 +1,13 @@
 ---
-title:  "Lambda CLI"
+title:  "Lambda"
 layout: blog
 order: 0
 topic: AWS
 topic_path: /docs/aws/index.html
 ---
-This guide explains how to use AWS Lambda over the CLI. The guide assumes you have already set up the AWS command line interface. You can verify proper setup using the command `aws --version`. Read the [guide published by AWS](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html) for more information.
+This guide explains how to use AWS Lambda over the CLI.
 
-# Commands
+<hr>
 
 Create the execution role
 ```bash
