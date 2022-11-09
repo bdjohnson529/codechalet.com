@@ -6,11 +6,6 @@ topic: Docker
 topic_path: /docs/docker/index.html
 ---
 
-View all images
-```bash
-docker images
-```
-
 View all containers
 ```bash
 docker ps
@@ -18,12 +13,17 @@ docker ps
 
 Exec into container
 ```
-docker exec -it <container> bash
+docker exec -u root -it <container> bash
 ```
 
-View all active containers
+<br>
+<hr>
+
+## Other
+
+View all images
 ```bash
-docker ps -a
+docker images
 ```
 
 Run image
