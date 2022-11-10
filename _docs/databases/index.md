@@ -30,11 +30,13 @@ Notes from configuring and deploying databases on the Windows Subsystem for Linu
 {%- for page in pages -%}
   {% if page.path contains "databases" %}
     {% unless page.path contains "index.md" %}
-      <li>
-        <a href="{{ page.url | relative_url }}">
-          {{ page.title | escape }}
-        </a>
-      </li>
+        {% unless page.path contains "databases/postgres" %}
+          <li>
+            <a href="{{ page.url | relative_url }}">
+              {{ page.title | escape }}
+            </a>
+          </li>
+      {% endunless %}
     {% endunless %}
   {% endif %}
 {%- endfor -%}

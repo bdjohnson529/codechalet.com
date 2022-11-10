@@ -26,6 +26,11 @@ Show all schemas
 \dn
 ```
 
+Check version
+```
+select version();
+```
+
 Create schema
 ```bash
 CREATE SCHEMA myschema;
@@ -39,4 +44,11 @@ SET search_path TO myschema;
 Quit CLI
 ```bash
 \q
+```
+
+Export query to CSV
+```
+psql --dbname=mydb --username=dbuser --host=127.0.0.1 \
+     -c "COPY (SELECT * FROM widget) TO stdout \
+     DELIMITER ',' CSV HEADER" > export.csv
 ```

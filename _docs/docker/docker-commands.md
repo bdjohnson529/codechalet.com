@@ -16,6 +16,11 @@ Exec into container
 docker exec -u root -it <container> bash
 ```
 
+Copy file into container
+```
+docker cp
+```
+
 <br>
 <hr>
 
