@@ -1,5 +1,5 @@
 ---
-title: SQL Cheat Sheet
+title: Schema
 layout: blog
 order: 3
 topic: Databases
