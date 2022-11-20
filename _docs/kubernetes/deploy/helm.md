@@ -1,5 +1,5 @@
 ---
-title: "Helm Commands"
+title: "Helm"
 layout: blog
 order: 3
 topic: Kubernetes

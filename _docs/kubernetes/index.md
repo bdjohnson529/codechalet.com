@@ -11,11 +11,11 @@ image: kubernetes
 Kubernetes uses manifests to orchestrate pods.
 
 
-## Commands
+#### Deploy
 
 <ul>
 {%- for page in pages -%}
-  {% if page.path contains "kubernetes/commands" %}
+  {% if page.path contains "kubernetes/deploy" %}
     {% unless page.path contains "index.md" %}
       <li>
         <a href="{{ page.url | relative_url }}">
@@ -28,7 +28,7 @@ Kubernetes uses manifests to orchestrate pods.
 </ul>
 
 
-## Networking
+#### Networking
 
 <ul>
 {%- for page in pages -%}
@@ -45,5 +45,5 @@ Kubernetes uses manifests to orchestrate pods.
 </ul>
 
 
-## Links
+#### Links
 * [Exposing an External IP Address to Access an Application in a Cluster](https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-address/)

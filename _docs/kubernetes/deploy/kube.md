@@ -1,5 +1,5 @@
 ---
-title: "Kubectl Commands"
+title: "Kubectl"
 layout: blog
 order: 0
 topic: Kubernetes
