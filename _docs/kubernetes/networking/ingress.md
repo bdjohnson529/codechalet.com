@@ -1,7 +1,7 @@
 ---
-title: "Kubernetes Ingress"
+title: "Ingress"
 layout: blog
-order: 4
+order: 0
 topic: Kubernetes
 topic_path: /docs/kubernetes/index.html
 ---
@@ -72,3 +72,17 @@ kubectl get ingress
 Within the AWS EKS console, you can view the ingress under the **Service and networking** tab.
 
 <img src="{{ site.baseurl }}/assets/img/docs/kubernetes/ingress.png" alt="Ingress">
+
+
+<hr>
+
+### Resources
+* [SSL Redirect](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/guide/tasks/ssl_redirect/)
+* [Application load balancing](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+* [Ingress specification](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/guide/ingress/spec/)
+* [AWS ALB - ingress annotations](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/annotations/)
+* [How do I set up ExternalDNS with Amazon EKS?](https://aws.amazon.com/premiumsupport/knowledge-center/eks-set-up-externaldns/)
+* [What is Ingress?](https://www.eksworkshop.com/beginner/130_exposing-service/ingress/)
+* [What is an Application Load Balancer?](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
+* [Application Load Balancing on Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+* [Set up ALB on AWS](https://aws.amazon.com/premiumsupport/knowledge-center/eks-alb-ingress-controller-setup/)
