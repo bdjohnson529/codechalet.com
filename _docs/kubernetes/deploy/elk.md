@@ -68,3 +68,6 @@ spec:
 
 #### Resources
 * [Elastic cloud on kubernetes](https://www.elastic.co/guide/en/cloud-on-k8s/2.5/index.html)
+* [TLS certificates](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-tls-certificates.html)
+* [REST APIs docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html)
+* [Match all query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-all-query.html)
