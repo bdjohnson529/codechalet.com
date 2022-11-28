@@ -1,7 +1,7 @@
 ---
-title: Postgres on Linux
+title: Deploy on Linux
 layout: blog
-order: 2
+order: 0
 topic: Databases
 topic_path: /docs/databases/index.html
 ---
@@ -16,3 +16,8 @@ sudo service postgresql restart
 sudo service postgresql status
 ```
 
+# postgresql client
+```bash
+sudo apt install postgresql-client-common
+sudo apt-get install postgresql-client
+```

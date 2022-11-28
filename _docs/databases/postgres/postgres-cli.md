@@ -1,5 +1,5 @@
 ---
-title: Postgres CLI
+title: psql CLI
 layout: blog
 order: 2
 topic: Databases

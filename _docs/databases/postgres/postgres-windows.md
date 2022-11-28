@@ -1,7 +1,7 @@
 ---
-title: Postgres on Windows
+title: Deploy on Windows
 layout: blog
-order: 2
+order: 1
 topic: Databases
 topic_path: /docs/databases/index.html
 ---

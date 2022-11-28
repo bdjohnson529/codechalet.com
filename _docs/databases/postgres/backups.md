@@ -1,7 +1,7 @@
 ---
 title: Backups
 layout: blog
-order: 5
+order: 3
 topic: Databases
 topic_path: /docs/databases/index.html
 ---
